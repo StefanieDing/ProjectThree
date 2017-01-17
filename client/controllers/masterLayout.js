@@ -24,11 +24,11 @@ function recordPosition(position) {
     //   'lat': latitude,
     //   'long': longitude
     // });
-    Session.set('lat', latitude)
-    Session.set('long', longitude)
-    var savedlated = Session.get('lat')
-    var savedlonged = Session.get('long')
-    console.log(savedlated+ "," + savedlonged)
+    Session.set('lat', latitude);
+    Session.set('long', longitude);
+    var savedlated = Session.get('lat');
+    var savedlonged = Session.get('long');
+    console.log(savedlated+ "," + savedlonged);
     console.log(latitude + "," + longitude);
 }
 
