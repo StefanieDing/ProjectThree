@@ -8,5 +8,8 @@
     "babel-runtime": "^6.18.0",
     "bcrypt": "^1.0.2",
     "meteor-node-stubs": "~0.2.0"
+  },
+  "engines": {
+    "node": "6.5.0"
   }
 }
