@@ -1,7 +1,8 @@
 function findLocations(radius, keyword){
     var lat = Session.get("lat");
     var long = Session.get("long");
-    var APIKey = Meteor.settings.APIKey;
+    // var APIKey = Meteor.settings.APIKey;
+    var APIKey = "AIzaSyDo0bJO1pVojjDWQaEkR-7VRIWdWxiUysE";
     var queryURL = "https://crossorigin.me/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + lat + "," + long + "&radius="+ radius + "&keyword="+ keyword + "&opennow=true&key=" + APIKey;
     console.log(APIKey);
 
