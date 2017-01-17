@@ -2,15 +2,21 @@ function findLocations(radius, keyword){
     var lat = Session.get("lat");
     var long = Session.get("long");
     // var APIKey = Meteor.settings.APIKey;
-    var APIKey = "AIzaSyDo0bJO1pVojjDWQaEkR-7VRIWdWxiUysE";
-    var queryURL = "https://crossorigin.me/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + lat + "," + long + "&radius="+ radius + "&keyword="+ keyword + "&opennow=true&key=" + APIKey;
-    console.log(APIKey);
+    var APIKey = "AIzaSyAZsRAVEPtigI7SzB_QnCuY92bdh0OpefY";
+    var queryURL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + lat + "," + long + "&radius="+ radius + "&keyword="+ keyword + "&opennow=true&key=" + APIKey;
+    console.log(lat + " , " + long);
+    // $.ajax({url: queryURL, method: 'GET'}).done(function(res) {
+    // var results = res.data;
 
-    $.ajax({url: queryURL, method: 'GET'}).done(function(response) {
-    var results = response.data;
-    // return results;
-    console.log(queryURL);
-    console.log(response);
+    // console.log(queryURL);
+    // console.log(res);
+    // });
+    HTTP.get( queryURL, {}, function( err, res ) {
+      if ( err ) {
+        console.log( err );
+      } else {
+        console.log( res );
+      }
     });
 }
 
