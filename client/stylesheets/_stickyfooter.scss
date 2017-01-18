@@ -2,8 +2,28 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  padding-left: 300px;
 }
 
 main {
   flex: 1 0 auto;
 }
+
+@media only screen and (max-width : 992px) {
+    nav, home, footer {
+        padding-left: 0;
+      }
+    }
+
+@media #{$medium-and-up} {
+    // styles for medium screens and larger
+  }
+
+  @media #{$medium-and-down} {
+    // styles for medium screens and down
+  }
+
+   @media #{$small-and-down} {
+    // styles for small screens and down
+  }
+

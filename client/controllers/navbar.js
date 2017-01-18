@@ -4,3 +4,7 @@ Template.navbar.helpers({
     return Roles.userIsInRole(Meteor.user(), ['admin']);
   }
 });
+
+Template.navbar.onRendered(function(){
+   $('.collapsible').collapsible();
+});
