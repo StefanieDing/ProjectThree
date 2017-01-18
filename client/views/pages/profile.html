@@ -1,18 +1,26 @@
 <template name="profile">
-  <main>
-    <div class="container">
-      <!-- Chat Column -->
-      <div class="col s3"></div>
+  <main><!-- 
+    <h3>Welcome back!</h3> -->
 
-      <div class="col s9">
-        <!-- Profile Info -->
-        <div class="row profile">
+      <div class="row">
+        <!-- Chat Column -->
+        <div class="col s3 chat-panel">
+          <div class="card-panel red">
+            <h3>Chat with Friends</h3>
+          </div>
         </div>
+        
+        <div class="col s9">
+          <!-- Profile Info -->
+          <div class="card-panel red profile-panel">
+            <h5>User Profile</h5>
+          </div>
 
-        <!-- Favorited Locations -->
-        <div class="row favLocations">
+          <!-- Favorited Locations -->
+          <div class="card-panel red favorite-panel">
+            <h5>Favorited Locations</h5>
+          </div>
         </div>
-      </div>
     </div>
   </main>
 </template>
