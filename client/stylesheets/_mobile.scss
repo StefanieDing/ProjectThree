@@ -1,0 +1,224 @@
+@media screen and (max-width:299px) and (min-width:0px) {
+  .indexGM{
+    background-color: rgb(253,253,253);
+    text-align: center;
+    font-family: 'Montserrat', "sans-serif";
+      // background-image: url("./img/2.jpeg");
+  }
+  .bottomMainNav-mobileOnly{
+    top: 0px;
+    position: absolute;
+    width: 100%;
+    height: 46px;
+    background-color: white;
+    padding-top: 5%;
+  }
+
+  .leftNavOption-mobileOnly{
+    height: 100%;
+    width: 50%;
+    float: left;
+    padding-top: 5%;
+  }
+
+  .rightNavOption-mobileOnly{
+    height: 100%;
+    width: 50%;
+    float: right;
+    padding-top: 5%;
+
+  }
+  .rightMainContainer{
+    display: none;
+  }
+
+  .mainSearch {
+    position: absolute;
+    top: 31%;
+    right: 9.38%;
+  }
+
+  .searchLogo{
+    font-size: 1.92rem;
+    line-height: 110%;
+    margin: 1.46rem 0 1.168rem 0;
+    color: rgb(239,97,95);
+  }
+
+  input.input-searchMain {
+    width: 236px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url(%22%22);
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+  }
+
+
+
+}
+
+
+
+@media screen and (max-width:800px) and (min-width:300px) {
+  .indexGM{
+    background-color: rgb(253,253,253);
+    text-align: center;
+    font-family: 'Montserrat', "sans-serif";
+      // background-image: url("./img/2.jpeg");
+  }
+  .bottomMainNav-mobileOnly{
+    top: 0px;
+    position: absolute;
+    width: 100%;
+    height: 46px;
+    background-color: white;
+    padding-top: 4%;
+  }
+
+  .leftNavOption-mobileOnly{
+    height: 100%;
+    width: 30%;
+    float: left;
+    color: rgb(207,210,216);
+  }
+  .rightNavOption-mobileOnly{
+    height: 100%;
+    width: 30%;
+    float: right;
+    color: rgb(207,210,216);
+  }
+  .middleNavOption-mobileOnly{
+    height: 60%;
+    right: 29%;
+    position: absolute;
+    width: 40%;
+    font-family: 'Vampiro One', cursive;
+    color: rgb(239,97,95);
+    font-size: 1.7em;
+    top: 9%;
+  }
+  .rightMainContainer{
+    display: none;
+  }
+
+  .mainSearch {
+    position: absolute;
+    top: 9.38%;
+    right: 5.38%;
+  }
+
+  .searchLogo{
+    display: none;
+    position: absolute;
+    top: 47%;
+    right: 15%;
+    font-size: 1.52rem;
+    line-height: 110%;
+    margin: 1.46rem 0 1.168rem 0;
+    color: rgb(239,97,95);
+  }
+
+  input.input-searchMain {
+    width: 271px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url(%22%22);
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+  }
+  .searchResultsContainer-mobileOnly{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-top: 35%;
+    overflow: auto;
+  }
+  .suggestedNearby{
+    margin-top: 5%;
+    margin-bottom: 24%;
+  }
+  .resultImageContainer{
+    height: 200px;
+    background-image: url("./img/2.jpeg");
+    background-size: cover;
+    background-position: inherit;
+    border-radius: 5px;
+    opacity: 0.8;
+  }
+  .resultTitle{
+    float: left;
+
+  }
+  .resultMoreInfo{
+    float: right;
+  }
+  .resultTextTitle{
+    font-size: 23px;
+    position: relative;
+    margin: -3%;
+  }
+
+
+}
+
+
+ @media screen and (max-width:1800px) and (min-width:801px) {
+   .searchResultsContainer-mobileOnly{
+     display: none;
+   }
+   .bottomMainNav-mobileOnly{
+     display: none
+   }
+   .indexGM{
+     height: 100vh;
+     width: 100%;
+     // background-color: rgb(219,21,38);
+     background-image: url("./img/2.jpeg");
+     background-size: cover;
+     background-position: inherit;
+     z-index: 1000;
+     text-align: center;
+     font-family: 'Montserrat', "sans-serif";
+   }
+   .mainSearch {
+       position: absolute;
+       width: 33.3%;
+       height: 32.8%;
+       right: 46.38%;
+   }
+
+   input.input-searchMain{
+       width: 330px;
+       box-sizing: border-box;
+       border: 2px solid #ccc;
+       border-radius: 4px;
+       font-size: 16px;
+       background-color: white;
+       background-image: url('');
+       background-position: 10px 10px;
+       background-repeat: no-repeat;
+       padding: 12px 20px 12px 40px;
+       -webkit-transition: width 0.4s ease-in-out;
+       transition: width 0.4s ease-in-out;
+   }
+
+   .bottomMainOptions-mobileOnly{
+     display: none;
+   }
+
+  }

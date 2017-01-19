@@ -1,7 +1,142 @@
 @import "{poetic:materialize-scss}/sass/components/_color.scss";
-$primary-color: color("red", "darken-4");
+
+$body-bg: transparent;
+
+$primary-color: color("grey", "darken-4");
+
 @import "{poetic:materialize-scss}/sass/materialize.scss";
+
 @import "./stylesheets/_stickyfooter.scss";
+
 @import "./stylesheets/_loading.scss";
+
 @import "./stylesheets/_navbar.scss";
-@import "./stylesheets/_home.scss";
+
+@import "./stylesheets/_mobile.scss";
+
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700');//googlefonts import into css, Montseerat
+@import url('https://fonts.googleapis.com/css?family=Vampiro+One');
+
+@font-face {
+    font-family: 'HelloStock';
+    src: url('/fonts/HelloStock.tff') format('truetype');;
+}
+
+.customFooter{
+  margin-top: 0px;
+}
+
+.noMargin-Bottom{
+  margin-bottom: 0px;
+}
+
+// .indexGM{
+//   height: 100vh;
+//   width: 100%;
+//   // background-color: rgb(219,21,38);
+//   background-image: url("./img/2.jpeg");
+//   background-size: cover;
+//   background-position: inherit;
+//   z-index: 1000;
+//   text-align: center;
+//   font-family: 'Montserrat', "sans-serif";
+// }
+
+
+
+.loginMainButton{
+  margin-right: 0px;
+}
+.rightMainContainer {
+    position: absolute;
+    width: 27.33%;
+    height: 100vh;
+    background-color: white;
+    right: 0px;
+}
+
+// .border-rightMain{
+//   border-right: 1px solid #edf5f8;
+// }
+//
+// .border-leftMain{
+//   border-left: 1px solid #edf5f8;
+// }
+//
+// .border-onbottom{
+//   border-bottom: 1px solid #edf5f8;
+// }
+
+.height-onethird{
+  height: 33vh;
+}
+
+.logoMainContainer{
+  width: 100%;
+  height: 10%;
+  padding: 10%;
+}
+
+.logoMain{
+  position: absolute;
+  font-family: 'Vampiro One', cursive;
+  font-size: 1.7em;
+  margin: 0px;
+  right: 31px;
+  @extend .red-text, .text-lighten-1;
+}
+
+.loginform-Main {
+    width: 100%;
+    height: 40%;
+    top: 26%;
+    position: absolute;
+    padding: 10%;
+}
+
+input.usernameMain{
+  // width: 230px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+input.passwordMain{
+  // width: 330px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+
+.signUpMain{
+  position: absolute;
+  display: inline-flex;
+  background-color: transparent;
+  border: none;
+  bottom: 13%;
+  @extend .red-text, .text-lighten-1;
+}
+
+.iCGM{
+  position: absolute;
+  margin: 8px;
+  color: rgb(209,209,209);
+}
