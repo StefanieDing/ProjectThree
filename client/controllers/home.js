@@ -1,10 +1,10 @@
 function findLocations(radius, keyword){
     var lat = Session.get("lat");
     var long = Session.get("long");
-    // var APIKey = Meteor.settings.APIKey;
-    var APIKey = "AIzaSyDo0bJO1pVojjDWQaEkR-7VRIWdWxiUysE";
-    var queryURL = "https://crossorigin.me/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + lat + "," + long + "&radius="+ radius + "&keyword="+ keyword + "&opennow=true&key=" + APIKey;
-    
+    var APIKey = Meteor.settings.public.APIKey;
+
+    var queryURL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + lat + "," + long + "&radius="+ radius + "&keyword="+ keyword + "&opennow=true&key=" + APIKey;
+    console.log(APIKey);
     console.log(queryURL);
     // $.ajax({url: queryURL, method: 'GET'}).done(function(res) {
     // var results = res.data;
@@ -27,13 +27,13 @@ Template.home.events({
     event.preventDefault();
  
     // Get value from form element
-    const target = event.target;
-    const keyword = target.keyword.value;
-    const radius = target.radius.value;
+    var target = event.target;
+    var keyword = target.keyword.value;
+    var radius = target.radius.value;
     
     //runs the helper to grab all the locaton results
-    findLocations(radius, keyword);
-
+    // findLocations(radius, keyword);
+    Meteor.call('findLocations', Session.get("lat"), Session.get("long"), radius, keyword)
     //searches by zipcode only
     // findzipcode(location)
  
