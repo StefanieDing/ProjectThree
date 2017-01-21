@@ -45,14 +45,14 @@
 </template>
 
 <template name="location">
-<h5>Found Locations</h5>
-  {{#each foundLocation}}
-    {{#each results}}
-      <li>  
-        <h5>{{ name}}</h5>
-        <p> {{rating}} {{ vicinity }}</p>
-      </li>
+  <h5>Found Locations</h5>
+    {{#each foundLocations}}
+      {{#each results}}
+        <li>  
+          <h5>{{ name}}</h5>
+          <p> {{rating}} {{ vicinity }}</p>
+        </li>
+      {{/each}}
     {{/each}}
-  {{/each}}
 </template>
 

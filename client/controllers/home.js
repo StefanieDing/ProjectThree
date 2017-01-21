@@ -47,7 +47,7 @@ Template.location.helpers({
   //               "vicinity": "1225 Sansom Street, Philadelphia",
   //           }]
   // }],
-  foundLocation: function() {
+  foundLocations: function() {
     if(Session.get("jsonBody")){
       return Session.get("jsonBody");
     }
