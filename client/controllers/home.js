@@ -1,26 +1,3 @@
-// function findLocations(radius, keyword){
-//     var lat = Session.get("lat");
-//     var long = Session.get("long");
-//     var APIKey = Meteor.settings.public.APIKey;
-
-//     var queryURL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + lat + "," + long + "&radius="+ radius + "&keyword="+ keyword + "&opennow=true&key=" + APIKey;
-//     console.log(APIKey);
-//     console.log(queryURL);
-//     // $.ajax({url: queryURL, method: 'GET'}).done(function(res) {
-//     // var results = res.data;
-
-//     // console.log(queryURL);
-//     // console.log(res);
-//     // });
-//     HTTP.get( queryURL, {}, function( err, res ) {
-//       if ( err ) {
-//         console.log( err );
-//       } else {
-//         console.log( res );
-//       }
-//     });
-// }
-
 Template.home.events({
   'submit .form'(event) {
     // Prevent default browser form submit
@@ -32,16 +9,27 @@ Template.home.events({
     var radius = target.radius.value;
     var zipcode = target.zipcode.value;
 
+    //grab lat and long if user enters zipcode
     if(zipcode){
       findzipcode(zipcode);
     }
+
+    setTimeout(function(){
+      //runs the helper to grab all the locaton results
+      Meteor.call('findLocations', Session.get("lat"), Session.get("long"), radius, keyword, function(err, res){
+        if(err){
+          console.log(err);
+        } else{
+          console.log('Success!');
+          //allow time to hit API
+          setTimeout(function(){
+            Session.set("jsonBody", res);
+            console.log(res);
+          }, 3000);
     
-    //runs the helper to grab all the locaton results
-    // findLocations(radius, keyword);
-    console.log('Sending form for.. ' + Session.get("lat") + "," + Session.get("long"));
-    Meteor.call('findLocations', Session.get("lat"), Session.get("long"), radius, keyword)
-    //searches by zipcode only
-    // findzipcode(location)
+        }
+      })
+    },3000);
  
     // Clear form
     target.keyword.value = '';
@@ -50,9 +38,22 @@ Template.home.events({
   },
 });
 
-Template.home.helpers({
-
+Template.location.helpers({
+  // foundLocation: [
+  //     {results: [
+  //           {
+  //               "name": "1225 Raw Sushi and Sake Lounge",
+  //               "rating": 4.1,
+  //               "vicinity": "1225 Sansom Street, Philadelphia",
+  //           }]
+  // }],
+  foundLocation: function() {
+    if(Session.get("jsonBody")){
+      return Session.get("jsonBody");
+    }
+  }
 });
+
 
 //if user enters zipcode instead of turning on location
 function findzipcode(zipcode){
