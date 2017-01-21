@@ -1,3 +1,18 @@
-nav{
-  margin-bottom: 40px;
-}
+  
+
+    @media only screen and (max-width : 992px) {
+      header, main, footer {
+        padding-left: 0;
+      }
+    }
+
+    .btn, .btn-large {
+      background-color: #b51212;
+    }
+
+     @media #{$medium-and-down} {
+    // styles for medium screens and down
+    .side-nav {
+    transform:translate(-100px)
+    }
+  }
