@@ -1,47 +1,18 @@
-nav{
-  margin-bottom: 40px;
-  padding-left: 300px;
-}
+  
 
-.side-nav{
-      width: 300px;
-      transform: translateX(0%);
-
-}
-
-@media #{$large-and-up} {
-    // styles for large screens and up
-    .side-nav{
-     background-color: #4d50a0;
-    }
-
-
-  }
-
-@media only screen and (max-width : 992px) {
-      nav, home, footer {
+    @media only screen and (max-width : 992px) {
+      header, main, footer {
         padding-left: 0;
-        transform: translateX(-100%);
       }
     }
 
-@media #{$medium-and-up} {
-    // styles for medium screens and larger
-    nav{
-      padding-left:0
+    .btn, .btn-large {
+      background-color: #b51212;
     }
-  }
 
-  @media #{$medium-and-down} {
+     @media #{$medium-and-down} {
     // styles for medium screens and down
-     nav{
-      padding-left:0
-    }
-  }
-
-   @media #{$small-and-down} {
-    // styles for small screens and down
-    nav{
-      padding-left:0
+    .side-nav {
+    transform:translate(-100px)
     }
   }
