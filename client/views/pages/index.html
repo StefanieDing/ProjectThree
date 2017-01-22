@@ -1,6 +1,11 @@
 <template name="index">
+  <div class="indexBackgroundPhoto"></div>
+  <div class="indexBackgroundGradient"></div>
   <div class="indexGM">
-    <div class="searchResultsContainer-mobileOnly">
+    <div class="mainLogoIndex">
+      <h1 class="mainLogo-Desktop"> Open Close </h1>
+    </div>
+    <!-- <div class="searchResultsContainer-mobileOnly">
       <div class="suggestedNearby">
         <div class="resultImageContainer">
         </div>
@@ -22,8 +27,8 @@
             <h6> more info </h6>
           </div>
         </div>
-    </div>
-      <div class="rightMainContainer">
+    </div> -->
+      <div class="rightMainContainer slideLeft">
         <div class="logoMainContainer">
             <h1 class="logoMain">NearMe. </h1>
         </div>
@@ -45,17 +50,30 @@
       <div class="col s1 height-onethird border-onbottom"></div>
     </div>
     <div class="row noMargin-Bottom">
+      <div class="pinMainContainer hatch wobble">
+      </div>
       <div class="mainSearch">
-        <h3 class="searchLogo"> Search near me </h3>
+        <a class="waves-effect waves-light btn mainSearch-Button red lighten-2"><i class="material-icons right">search</i>Search</a>
+        <p class="orTag"> or </p>
+        <a class="waves-effect waves-light btn red lighten-2 signButtons signIn-Desktop">Log In</a>
+        <a class="waves-effect waves-light btn red lighten-2 signButtons signUp-Desktop">SignUp</a>
+        <!-- <button class="mainSearch-Button">search</button> -->
+        <!-- <h3 class="searchLogo"> Search near me </h3>
         <form>
           <i class="small material-icons iCGM">search</i><input type="text" class="input-searchMain" name="search" placeholder="Search..">
-        </form>
+        </form> -->
       </div>
       <div class="col s1 height-onethird border-onbottom"></div>
-
-    </div>
+      </div>
     <div class="row noMargin-Bottom">
-      <div class="bottomMainNav-mobileOnly">
+      <div class="socialLinksContainer">
+        <div class="socialLinksBottom">
+          <a class="socialMenuLinks" href="https://www.instagram.com/gerardo_mes/"> instagram</a>
+          <a class="socialMenuLinks" href="https://github.com/Gmes23">Github</a>
+          <a class="socialMenuLinks" href="https://www.linkedin.com/in/gerardo-mestanza-6b518b130">Linkedin</a>
+        </div>
+      </div>
+      <!-- <div class="bottomMainNav-mobileOnly">
         <div class="leftNavOption-mobileOnly">
           signUp
         </div>
@@ -66,8 +84,15 @@
           signIn
         </div>
       </div>
-      <div class="col s1 height-onethird border-onbottom"></div>
+      <div class="col s1 height-onethird border-onbottom"></div> -->
 
     </div>
   </div>
+  <script type="text/javascript">
+  $('.mainSearch-Button')on('click', function(){
+    $('.rightMainContainer').toggle();
+  });
+
+
+  </script>
 </template>
