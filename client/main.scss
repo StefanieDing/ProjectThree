@@ -139,20 +139,21 @@ $primary-color: color("grey", "darken-4");
 
 
 
-.mainSearch-Button{
-  padding-top: 2%;
-  width: 200px;
-  height: 60px;
-  border-radius: 25px;
-  z-index: 10;
-}
+// .mainSearch-Button{
+//   padding-top: 3%;
+//   width: 200px;
+//   height: 60px;
+//   border-radius: 25px;
+//   z-index: 10;
+//   font-size: 22px;
+// }
 
 .loginMainButton{
   margin-right: 0px;
 }
 
 .rightMainContainer {
-  // display: none;
+    display: none;
     position: absolute;
     top: 0px;
     width: 27.33%;
@@ -257,7 +258,7 @@ input.passwordMain{
   background-color: transparent;
   border: none;
   bottom: 13%;
-  @extend .red-text, .text-lighten-1;
+  // @extend .red-text, .text-lighten-1;
 }
 
 .iCGM{
