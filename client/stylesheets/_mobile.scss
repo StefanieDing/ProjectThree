@@ -115,6 +115,14 @@
     margin: -3%;
   }
 
+  .searchForm-Mobile{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+
+  }
 
 
 
@@ -171,7 +179,7 @@
     top: 9%;
   }
   .rightMainContainer{
-    // display: none;
+    display: none;
     position: absolute;
     top: 0px;
     width: 100%;
@@ -286,6 +294,103 @@
     // margin-right: 10px;
   }
 
+  .searchForm-Mobile{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    z-index: 50;
+
+  }
+
+  .bottomNav-LoginMobile{
+    // position: fixed;
+    // background-color: gray;
+    // height: 50px;
+    // width: 50%;
+    // bottom: 0px;
+    // border-radius: 25px;
+    // border-top-left-radius: 25px;
+    // border-top-right-radius: 25px;
+    // border-bottom-right-radius: 25px;
+    // border-bottom-left-radius: 25px;
+
+
+    padding-top: 7px;
+    position: fixed;
+    background-color: whitesmoke;
+    height: 160px;
+    width: 50%;
+    bottom: 0px;
+    border-top-right-radius: 200px;
+
+  }
+
+  .messagesButton-MobileDashboard{
+    position: relative;
+    right: 0px;
+  }
+
+  .favoritesButton-MobileDashboard{
+    position: relative;
+    top: 28px;
+    right: -12px;
+  }
+
+  .userProfileButton-MobileDashboard{
+    position: relative;
+    top: 90px;
+    right: 6px;
+  }
+
+  .searchButton-MobileDashboard{
+    position: relative;
+    right: 46px;
+    border-radius: 80px;
+    height: 72px;
+    top: 15px;
+  }
+
+  .headerContainer-Mobile{
+    position: absolute;
+    top: 0px;
+    height: 75px;
+    // background-color: red;
+    width: 100%;
+
+  }
+
+  .logo-Mobile{
+    font-size: 20px;
+    color: red;
+    position: relative;
+    top: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  input.searchbar-Mobile{
+    left: 20%;
+    border: 1px solid #d1d1d1;
+    font: bold 12px Arial,Helvetica,Sans-serif;
+    color: #bebebe;
+    width: 160px;
+    height: 20px;
+    padding: 6px 15px 6px 35px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    -webkit-transition: all 0.7s ease 0s;
+    -moz-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
+    top: 34px;
+    position: absolute;
+  }
 }
 
 
@@ -404,6 +509,14 @@
      z-index: 10;
      font-size: 22px;
    }
+   .rightMainContainer{
+    //  display: none;
+   }
+  //  this is the beginning of the search form for mobile
+   .searchForm-Mobile{
+     display: none;
+   }
+
    .rightMainContainer{
      display: none;
    }

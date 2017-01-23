@@ -104,36 +104,36 @@ $primary-color: color("grey", "darken-4");
   margin-bottom: 0px;
 }
 
-.wobble{
-  animation-name: hatch1;
-  -webkit-animation-name: hatch1;
-  animation-duration: 2s;
-  -webkit-animation-duration: 2s;
-  transform-origin: 50% 100%;
-  -ms-transform-origin: 50% 100%;
-  -webkit-transform-origin: 50% 100%;
-  visibility: visible !important;
-  -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
-  animation-iteration-count: infinite;
-
-}
-
-// .hatch{
-// 	animation-name: hatch;
-// 	-webkit-animation-name: hatch;
+// .wobble{
+//   animation-name: hatch1;
+//   -webkit-animation-name: hatch1;
+//   animation-duration: 2s;
+//   -webkit-animation-duration: 2s;
+//   transform-origin: 50% 100%;
+//   -ms-transform-origin: 50% 100%;
+//   -webkit-transform-origin: 50% 100%;
+//   visibility: visible !important;
+//   -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+//   animation-iteration-count: infinite;
 //
-// 	animation-duration: 2s;
-// 	-webkit-animation-duration: 2s;
-//
-// 	animation-timing-function: ease-in-out;
-// 	-webkit-animation-timing-function: ease-in-out;
-//
-// 	transform-origin: 50% 100%;
-// 	-ms-transform-origin: 50% 100%;
-// 	-webkit-transform-origin: 50% 100%;
-//
-// 	visibility: visible !important;
 // }
+
+.hatch{
+	animation-name: hatch;
+	-webkit-animation-name: hatch;
+
+	animation-duration: 2s;
+	-webkit-animation-duration: 2s;
+
+	animation-timing-function: ease-in-out;
+	-webkit-animation-timing-function: ease-in-out;
+
+	transform-origin: 50% 100%;
+	-ms-transform-origin: 50% 100%;
+	-webkit-transform-origin: 50% 100%;
+
+	visibility: visible !important;
+}
 
 
 
