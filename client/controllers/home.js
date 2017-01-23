@@ -34,6 +34,22 @@ Template.home.events({
     target.radius.value = '';
     target.zipcode.value = '';
   },
+  //grabs more information on location user clicks on
+  'click .locationDetail'(event){ 
+    var placeid = event.target.id;
+    console.log(placeid);
+
+    Meteor.call('getDetails', placeid, function(err, res){
+      setTimeout(function(){
+        if(err){
+          console.log(err);
+        } else{
+          console.log(res);
+          Session.set("jsonDetail", res);
+        }
+      })
+     },3000);
+  }
 });
 
 Template.home.helpers({

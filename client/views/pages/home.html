@@ -34,9 +34,7 @@
         <h5>Found Locations</h5>
           {{#if thereAreLocations}}
             {{#each foundLocations }}
-              <li>
-                <p>{{ name }} Rating: {{ rating }} Address: {{ vicinity }}</p>
-              </li>
+                <button class="locationDetail" id={{ place_id }}>{{ name }} <strong>Rating:</strong> {{ rating }} <strong>Address:</strong> {{ vicinity }}</button>
             {{/each}}
           {{else}}
             {{ foundLocations }}
