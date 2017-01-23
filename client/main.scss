@@ -91,7 +91,7 @@ $primary-color: color("grey", "darken-4");
   position: absolute;
   height: 100vh;
   width: 100%;
-  background-image: url("/img/1.jpg");
+  background-image: url("/img/3.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -137,30 +137,19 @@ $primary-color: color("grey", "darken-4");
 
 
 
-
-
-// .mainSearch-Button{
-//   padding-top: 3%;
-//   width: 200px;
-//   height: 60px;
-//   border-radius: 25px;
-//   z-index: 10;
-//   font-size: 22px;
-// }
-
 .loginMainButton{
   margin-right: 0px;
 }
 
-.rightMainContainer {
-    display: none;
-    position: absolute;
-    top: 0px;
-    width: 27.33%;
-    height: 100vh;
-    background-color: white;
-    right: 0px;
-}
+// .rightMainContainer {
+//     display: none;
+//     position: absolute;
+//     top: 0px;
+//     width: 27.33%;
+//     height: 100vh;
+//     background-color: white;
+//     right: 0px;
+// }
 
 .slideLeft{
 	animation-name: slideLeft;
@@ -253,12 +242,11 @@ input.passwordMain{
 }
 
 .signUpMain{
-  position: absolute;
+  // position: absolute;
   display: inline-flex;
   background-color: transparent;
   border: none;
-  bottom: 13%;
-  // @extend .red-text, .text-lighten-1;
+  color: white;
 }
 
 .iCGM{

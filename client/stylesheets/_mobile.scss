@@ -46,9 +46,9 @@
     font-size: 1.7em;
     top: 9%;
   }
-  .rightMainContainer{
-    display: none;
-  }
+  // .rightMainContainer{
+  //   display: none;
+  // }
 
   .mainSearch {
     position: absolute;
@@ -171,7 +171,14 @@
     top: 9%;
   }
   .rightMainContainer{
-    display: none;
+    // display: none;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    right: 0px;
+    z-index: 50;
   }
 
   .mainSearch {
@@ -268,6 +275,17 @@
 
   }
 
+  .signUpMain{
+    // font-size: 20px
+    margin-left: 10px;
+    float: left;
+  }
+
+  .loginMainbutton{
+    float: left;
+    // margin-right: 10px;
+  }
+
 }
 
 
@@ -352,14 +370,15 @@
 
    .socialLinksContainer{
      position: absolute;
-     bottom: 0px;
+     top: 0px;
+     padding-top: 20px;
      height: 5%;
      width: 100%;
    }
 
    .socialLinksBottom{
      float: left;
-     width: 20%;
+     width: 30%;
    }
 
    .socialMenuLinks{
@@ -375,7 +394,7 @@
      color: white;
    }
    .signUp-Desktop{
-      
+
    }
    .mainSearch-Button{
      padding-top: 2%;
@@ -385,5 +404,7 @@
      z-index: 10;
      font-size: 22px;
    }
-
+   .rightMainContainer{
+     display: none;
+   }
 }

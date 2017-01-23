@@ -4,7 +4,7 @@ function findLocations(radius, keyword){
     // var APIKey = Meteor.settings.APIKey;
     var APIKey = "AIzaSyDo0bJO1pVojjDWQaEkR-7VRIWdWxiUysE";
     var queryURL = "https://crossorigin.me/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + lat + "," + long + "&radius="+ radius + "&keyword="+ keyword + "&opennow=true&key=" + APIKey;
-    
+
     console.log(queryURL);
     // $.ajax({url: queryURL, method: 'GET'}).done(function(res) {
     // var results = res.data;
@@ -25,18 +25,18 @@ Template.home.events({
   'submit .form'(event) {
     // Prevent default browser form submit
     event.preventDefault();
- 
+
     // Get value from form element
     const target = event.target;
     const keyword = target.keyword.value;
     const radius = target.radius.value;
-    
+
     //runs the helper to grab all the locaton results
     findLocations(radius, keyword);
 
     //searches by zipcode only
     // findzipcode(location)
- 
+
     // Clear form
     target.keyword.value = '';
     target.radius.value = '';
@@ -45,7 +45,7 @@ Template.home.events({
 });
 
 Template.home.helpers({
-  
+
   // 'locationZipcoderesults': function findzipcode(location){
   //   var APIKey = Meteor.settings.APIKey;
   //   var queryURL = "https://maps.googleapis.com/maps/api/geocode/json?&address=" + zipcode + "&key="+ APIKey;
@@ -68,3 +68,6 @@ Template.home.helpers({
 });
 
 
+$('.mainSearch-Button').on('click', function(){
+  $('.rightMainContainer').toggle();
+})
