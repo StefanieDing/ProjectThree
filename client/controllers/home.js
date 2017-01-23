@@ -14,23 +14,21 @@ Template.home.events({
       findzipcode(zipcode);
     }
 
+    //waits for zipcode to be set
     setTimeout(function(){
-      //runs the helper to grab all the locaton results
+      //runs the method to grab all the locaton results
       Meteor.call('findLocations', Session.get("lat"), Session.get("long"), radius, keyword, function(err, res){
         if(err){
           console.log(err);
         } else{
           console.log('Success!');
-          //allow time to hit API
-          setTimeout(function(){
-            Session.set("jsonBody", res);
-            console.log(res);
-          }, 3000);
-    
+          //sets jsonBody with the return
+          Session.set("jsonBody", res.data.results);
+          console.log(res.data.results);
         }
       })
     },3000);
- 
+
     // Clear form
     target.keyword.value = '';
     target.radius.value = '';
@@ -38,17 +36,18 @@ Template.home.events({
   },
 });
 
-Template.location.helpers({
-  // foundLocation: [
-  //     {results: [
-  //           {
-  //               "name": "1225 Raw Sushi and Sake Lounge",
-  //               "rating": 4.1,
-  //               "vicinity": "1225 Sansom Street, Philadelphia",
-  //           }]
-  // }],
-  foundLocations: function() {
-    if(Session.get("jsonBody")){
+Template.home.helpers({
+  thereAreLocations() {
+    if((Session.get("jsonBody")).length === 0){
+      return false;
+    } else{
+      return true;
+    }
+  },
+  foundLocations() {
+    if((Session.get("jsonBody")).length === 0){
+      return "No locations found!"
+    } else{
       return Session.get("jsonBody");
     }
   }

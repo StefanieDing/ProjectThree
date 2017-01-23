@@ -31,28 +31,18 @@
                 <input type="submit" value="submit">
           </form>
         </div>
-        <!-- <h5>Found Locations</h5>
-        <ul> -->
-      <!-- {{#each foundLocation}}
-        {{#each results}}
-          <li>{{ name }} {{ rating }} {{ vicinity }}</li>
-        {{/each}}
-      {{/each}} -->
-    <!-- </ul> -->
+        <h5>Found Locations</h5>
+          {{#if thereAreLocations}}
+            {{#each foundLocations }}
+              <li>
+                <p>{{ name }} Rating: {{ rating }} Address: {{ vicinity }}</p>
+              </li>
+            {{/each}}
+          {{else}}
+            {{ foundLocations }}
+          {{/if}}
       </div>
     </div>
   </div>
-</template>
-
-<template name="location">
-  <h5>Found Locations</h5>
-    {{#each foundLocations}}
-      {{#each results}}
-        <li>  
-          <h5>{{ name}}</h5>
-          <p> {{rating}} {{ vicinity }}</p>
-        </li>
-      {{/each}}
-    {{/each}}
 </template>
 
