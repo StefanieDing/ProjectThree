@@ -66,8 +66,3 @@ Template.home.helpers({
   // };
 
 });
-
-
-$('.mainSearch-Button').on('click', function(){
-  $('.rightMainContainer').toggle();
-})
