@@ -14,11 +14,14 @@ Template.locations.events({
       })
 
     //pop-up modal that displays all the details
+    MaterializeModal.message
+      title: 'Location'
+      message: 'Some Details.'
   }
 });
 
-Template.locationModal.helpers({
-  details(){
-    return Session.get("jsonDetail");
-  }
-});
+// Template.locationModal.helpers({
+//   details(){
+//     return Session.get("jsonDetail");
+//   }
+// });

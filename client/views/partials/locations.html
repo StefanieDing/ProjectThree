@@ -4,7 +4,7 @@
       <a class="waves-effect waves-light btn locationDetail" id={{ place_id }}>{{ name }}
       {{#if currentUser}}
         <a class="favLocation" id={{ place_id }}>
-          <i class="material-icons right">star</i>
+          <i class="fa fa-heart-empty"></i>
         </a>
       {{/if}}
       </a>
@@ -12,7 +12,7 @@
   {{/each}}
 </template>
 
-<template name="locationModal">
+<!-- <template name="locationModal">
   <div class="locModal">
     {{#each details}}
       <h3>{{ name }}</h3>
@@ -31,4 +31,4 @@
         {{/each}}
     {{/each}}
   </div>
-</template>
+</template> -->
