@@ -48,7 +48,8 @@ Template.home.events({
         }
       })
      },3000);
-  }
+  },
+
 });
 
 Template.home.helpers({
@@ -65,7 +66,9 @@ Template.home.helpers({
     } else{
       return Session.get("jsonBody");
     }
-  }
+  },
+
+
 });
 
 
@@ -85,3 +88,18 @@ function findzipcode(zipcode){
   Session.set('long', longs);
   })
 };
+
+
+// initiate submit css & reset submit css
+Template.home.events({
+'click .submitCss' (event) {
+  event.preventDefault();
+  $('.submitCss').addClass('clicked')
+    setTimeout(function(){
+      $(".clicked").removeClass("clicked"),10000})
+}
+});
+// function timeout() {
+//   setTimeout(function(){
+//       $(".clicked").removeClass("clicked"),10000})
+// }
