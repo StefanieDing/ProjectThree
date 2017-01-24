@@ -27,8 +27,11 @@
                   </select>
               </div>
             </div>
-
-                <input type="submit" value="submit">
+                <label class="submitCss"><input type="submit" value="submit" class="submitCss">
+                <svg class="submitSVG" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="5px" y="5px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+                      <path id="paper-plane-icon" d="M462,54.955L355.371,437.187l-135.92-128.842L353.388,167l-179.53,124.074L50,260.973L462,54.955z
+                      M202.992,332.528v124.517l58.738-67.927L202.992,332.528z"></path> 
+                </svg></label>
           </form>
         </div>
         <div class="row">
@@ -37,9 +40,12 @@
           <div class="resultContainer">
                {{#if thereAreLocations}}
                {{#each foundLocations }}
-                   <button class="locationDetail blue-grey darken-1" id={{ place_id }}> 
+                   <button class="locationDetail blue-grey darken-1 changes" id={{ place_id }}>
+                     <svg class="resultsSVG">
+                       <rect x="0" y="0" fill="none" width="100%" height="100%"/>
+                     </svg>
                       <div class="row">
-                        <div class="col s12">
+                        <div class="col s12 innerStyle">
                           <strong>Place:</strong> {{ name }}
                         </div>
                         <div class="col s12">
