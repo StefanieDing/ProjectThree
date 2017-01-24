@@ -2,68 +2,72 @@ Template.home.events({
   'submit .form'(event) {
     // Prevent default browser form submit
     event.preventDefault();
- 
-    // Get value from form element
+
     var target = event.target;
     var keyword = target.keyword.value;
     var radius = target.radius.value;
-    // var zipcode = target.radiys.value;
+    var zipcode = target.zipcode.value;
 
-    //  if(zipcode){
-    //   findzipcode(zipcode);
-    // }
-    
-    
-    //runs the helper to grab all the locaton results
-    // findLocations(radius, keyword);
-    console.log('Sending form for.. ' + Session.get("lat") + "," + Session.get("long"));
-    Meteor.call('findLocations', Session.get("lat"), Session.get("long"), radius, keyword, displayJson())
-   
-    //searches by zipcode only
-    // findzipcode(location)
- 
+    //grab lat and long if user enters zipcode
+    if(zipcode){
+      findzipcode(zipcode);
+    }
+
+    //waits for zipcode to be set
+    setTimeout(function(){
+      //runs the method to grab all the locaton results
+      Meteor.call('findLocations', Session.get("lat"), Session.get("long"), radius, keyword, function(err, res){
+        if(err){
+          console.log(err);
+        } else{
+          console.log('Success!');
+          //sets jsonBody with the return
+          Session.set("jsonBody", res.data.results);
+          console.log(res.data.results);
+        }
+      })
+    },3000);
+
     // Clear form
     target.keyword.value = '';
     target.radius.value = '';
-    target.location.value = '';
-
-
+    target.zipcode.value = '';
   },
+  //grabs more information on location user clicks on
+  'click .locationDetail'(event){ 
+    var placeid = event.target.id;
+    console.log(placeid);
+
+    Meteor.call('getDetails', placeid, function(err, res){
+      setTimeout(function(){
+        if(err){
+          console.log(err);
+        } else{
+          console.log(res);
+          Session.set("jsonDetail", res);
+        }
+      })
+     },3000);
+  }
 });
 
-//json from server to client
-function displayJson() {
-    Meteor.call('findLocations', function(err, jsonBody){
-      if ( err ) {
-        console.log( err )
-      } else {
-    Session.set('jsonResults',jsonBody)
-    var displaySession = Session.get('jsonResults')
-    console.log(displaySession)
-  }
-  }
-  )}
-
-  
-
-// Template.home.created = function() {
-//   Meteor.call('findLocations', function(err, jsonBody){
-//     console.log(jsonBody)
-//     Session.set('jsonBody',jsonBody)
-//     var displaySession = session.set('jsonBody', jsonBody)
-//   })
-// }
-
-
-//display results to page
 Template.home.helpers({
-
-  returnJson: function() {
-    return Session.get('jsonBody')
-
+  thereAreLocations() {
+    if((Session.get("jsonBody")).length === 0){
+      return false;
+    } else{
+      return true;
     }
-
+  },
+  foundLocations() {
+    if((Session.get("jsonBody")).length === 0){
+      return "No locations found!"
+    } else{
+      return Session.get("jsonBody");
+    }
+  }
 });
+
 
 //if user enters zipcode instead of turning on location
 function findzipcode(zipcode){
@@ -81,5 +85,3 @@ function findzipcode(zipcode){
   Session.set('long', longs);
   })
 };
-
-

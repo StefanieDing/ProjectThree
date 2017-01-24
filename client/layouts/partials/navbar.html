@@ -6,7 +6,7 @@
           <div class="nav-wrapper">
             <a href="/" class="brand-logo">NearMe</a>
             <a href="#" data-activates="mobile-nav" class="button-collapse"><i class="material-icons">menu</i></a>
-            <ul class="right hide-on-med-and-down">
+             <ul class="right hide-on-med-and-down">
               {{#if isAdminUser}}
                 <li><a href="/usermgmt">User Management</a></li>
               {{/if}}
@@ -23,8 +23,33 @@
               {{else}}
                 <li><a href="/sign-in">Sign In</a></li>
               {{/if}}
-                <li><a href="/about">About</a></li>
+              <li><a href="/about">About</a></li>
             </ul>
+            <a href="#" data-activates="slide-out" class=" btn button-collapse"><i class="material-icons">menu</i></a>
+            <ul id="slide-out" class="side-nav fixed">
+              <li class="profile">
+                <ul class="collapsible collapsible-accordion">
+                    <li class= "bold">
+                      <a class="collapsible-header  waves-effect waves-red"> Profile</a>
+                      <div class="collapsible-body">
+                        <ul>
+                          <li><a href="profile.html"></a>Profile</li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class= "bold">
+                      <a class="collapsible-header  waves-effect waves-red"> Messenger</a>
+                      <div class="collapsible-body">
+                        <ul>
+                          <li style="background-color: black"><a href="#"></a>Messenger</li>
+                          <li style="background-color: green"><a href="#"></a>Bob</li>
+                          <li style="background-color: pink"><a href="#"></a>Cindy</li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
           </div>
         </div>
       </div>
