@@ -2,11 +2,18 @@ Template.home.events({
   'submit .form'(event) {
     // Prevent default browser form submit
     event.preventDefault();
+    // initiate submit css & reset submit css
+     $('.submitCss').addClass('clicked')
+       setTimeout(function(){
+      $(".clicked").removeClass("clicked")
+      },3000);
 
     var target = event.target;
     var keyword = target.keyword.value;
     var radius = target.radius.value;
     var zipcode = target.zipcode.value;
+
+    
 
     //grab lat and long if user enters zipcode
     if(zipcode){
@@ -90,20 +97,4 @@ function findzipcode(zipcode){
 };
 
 
-// initiate submit css & reset submit css
-Template.home.events({
-'click .submitCss' (event) {
-  event.preventDefault()
-  $('.submitCss').addClass('clicked')
-  meteor.call(timeout())
-    setTimeout(function(){
-      $(".clicked").removeClass("clicked"),10000})
-}
 
-});
-
-
-// function timeout() {
-//   setTimeout(function(){
-//       $(".clicked").removeClass("clicked"),10000})
-// }

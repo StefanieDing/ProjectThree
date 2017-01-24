@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <template name="home">
   <div class="container">
     <div class="row">
@@ -68,71 +67,3 @@
     </div>
   </div>
 </template>
-
-
-=======
-<template name="home">
-  <div class="container">
-    <div class="row">
-      <div class="form col s12">
-        <h5 class="homeTitle"><center>What's good near you?</center></h5>
-        <div class="row">
-          <form class="col s8">
-            <div class="row">
-              <div class="input-field col s6">
-                <input placeholder="" id="keyword" type="text" class="validate">
-                <label for="keyword">Keyword</label>
-              </div>
-              <div class="input-field col s6">
-                <input id="zipcode" type="text" class="validate">
-                <label for="zipcode">Zip Code</label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s6">
-                <label>Radius(Miles)</label><br><br>
-                  <select id="radius" class="browser-default">
-                    <option value="" disabled selected>Choose Radius</option>
-                    <option value="8000">5</option>
-                    <option value="16000">10</option>
-                    <option value="33000">20</option>
-                    <option value="50000">30</option>
-                  </select>
-              </div>
-            </div>
-
-                <input type="submit" value="submit">
-          </form>
-        </div>
-        <div class="row">
-          <div class="col s6">
-        <h5 class="resultsTitle">Open Right Now</h5>
-          <div class="resultContainer">
-               {{#if thereAreLocations}}
-               {{#each foundLocations }}
-                   <button class="locationDetail blue-grey darken-1" id={{ place_id }}> 
-                      <div class="row">
-                        <div class="col s12">
-                          <strong>Place:</strong> {{ name }}
-                        </div>
-                        <div class="col s12">
-                          <strong>Rating:</strong> {{ rating }}
-                        </div>
-                        <div class=" col s12">
-                          <strong>Address:</strong> {{ vicinity }}
-                        </div>
-                   </div>
-                   </button>
-                    {{/each}}
-                 {{else}}
-               {{ foundLocations }}
-                 {{/if}}
-          </div><!--resultcontainer-->
-          </div>
-        </div><!--rowresult-->
-      </div>
-    </div>
-  </div>
-</template>
-
->>>>>>> 67e285ad5226b5bde102f8ab28e2406c407d079b
