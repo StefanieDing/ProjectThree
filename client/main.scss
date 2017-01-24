@@ -104,6 +104,10 @@ $primary-color: color("grey", "darken-4");
   margin-bottom: 0px;
 }
 
+.colorIcon2{
+  color: rgb(255,250,0);
+}
+
 // .wobble{
 //   animation-name: hatch1;
 //   -webkit-animation-name: hatch1;
@@ -118,6 +122,10 @@ $primary-color: color("grey", "darken-4");
 //
 // }
 
+.logo-Mobile{
+  @extend .red-text, .text-lighten-1;
+  font-family: 'Vampiro One', cursive;
+}
 .hatch{
 	animation-name: hatch;
 	-webkit-animation-name: hatch;
