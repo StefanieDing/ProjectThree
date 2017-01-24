@@ -2,8 +2,7 @@ Template.home.events({
   'submit .form'(event) {
     // Prevent default browser form submit
     event.preventDefault();
- 
-    // Get value from form element
+
     var target = event.target;
     var keyword = target.keyword.value;
     var radius = target.radius.value;
