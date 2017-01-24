@@ -93,12 +93,16 @@ function findzipcode(zipcode){
 // initiate submit css & reset submit css
 Template.home.events({
 'click .submitCss' (event) {
-  event.preventDefault();
+  event.preventDefault()
   $('.submitCss').addClass('clicked')
+  meteor.call(timeout())
     setTimeout(function(){
       $(".clicked").removeClass("clicked"),10000})
 }
+
 });
+
+
 // function timeout() {
 //   setTimeout(function(){
 //       $(".clicked").removeClass("clicked"),10000})
