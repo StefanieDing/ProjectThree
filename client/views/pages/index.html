@@ -1,0 +1,89 @@
+<template name="index">
+  <div class="indexBackgroundPhoto"></div>
+  <div class="indexBackgroundGradient"></div>
+  <div class="indexGM">
+    <!--  this is the beginning of the search for mobile-->
+    <div class="searchForm-Mobile">
+      <div class="headerContainer-Mobile">
+        <div class="mobileLogo-Container">
+          <h1 class="logo-Mobile">
+            Open-Close
+          </h1>
+        </div>
+        <form method="get" action="/search" id="search">
+          <input name="q" type="text" size="40" placeholder="Search..." class="searchbar-Mobile">
+        </form>
+      </div>
+      <div class="bottomNav-LoginMobile">
+        <a class="btn-floating btn-large waves-effect waves-light red lighten-2 messagesButton-MobileDashboard"><i class="material-icons">perm_identity</i></a>
+        <a class="btn-floating btn-large waves-effect waves-light red lighten-2 favoritesButton-MobileDashboard"><i class="material-icons">grade</i></a>
+        <a class="btn-floating btn-large waves-effect waves-light red lighten-2 userProfileButton-MobileDashboard"><i class="material-icons">chat_bubble_outline</i></a>
+        <a class="waves-effect waves-light red btn searchButton-MobileDashboard"><i class="material-icons">search</i></a>
+      </div>
+    </div>
+    <!--  this is where the search form for mobile ends-->
+    <div class="mainLogoIndex">
+      <h1 class="mainLogo-Desktop"> Open Close </h1>
+    </div>
+      <div class="rightMainContainer slideLeft">
+        <div class="logoMainContainer">
+            <h1 class="logoMain">Open Close </h1>
+        </div>
+        <div class="loginform-Main">
+          <div class="login">
+            <h4 >Login</h4>
+            <form method="post">
+              <i class="small material-icons iCGM">perm_identity</i><input type="text"  class="usernameMain" name="u" placeholder="Username" required="required" />
+              <i class="small material-icons iCGM">lock_outline</i><input type="password" class="passwordMain" name="p" placeholder="Password" required="required" />
+              <div class="buttonsTo">
+              <button type="submit" class="waves-effect waves-light btn red lighten-2 loginMainbutton">Log In</button>
+              <button type="submit" class="waves-effect waves-light btn red lighten-2 signUpMain">Sign Up</button>
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    <div class="row noMargin-Bottom">
+      <div class="col s1 height-onethird border-onbottom"></div>
+    </div>
+    <div class="row noMargin-Bottom">
+      <div class="pinMainContainer hatch wobble">
+      </div>
+      <div class="mainSearch">
+        <a class="waves-effect waves-light btn mainSearch-Button red lighten-2"><i class="material-icons right">search</i>Search</a>
+        <p class="orTag"> or </p>
+        <a class="waves-effect waves-light btn red lighten-2 signButtons signIn-Desktop">Log In</a>
+        <a class="waves-effect waves-light btn red lighten-2 signButtons signUp-Desktop">SignUp</a>
+        <!-- <button class="mainSearch-Button">search</button> -->
+        <!-- <h3 class="searchLogo"> Search near me </h3>
+        <form>
+          <i class="small material-icons iCGM">search</i><input type="text" class="input-searchMain" name="search" placeholder="Search..">
+        </form> -->
+      </div>
+      <div class="col s1 height-onethird border-onbottom"></div>
+      </div>
+    <div class="row noMargin-Bottom">
+      <div class="socialLinksContainer">
+        <div class="socialLinksBottom">
+          <a class="socialMenuLinks" href="#"> instagram</a>
+          <a class="socialMenuLinks" href="#">Github</a>
+          <a class="socialMenuLinks" href="#">Linkedin</a>
+        </div>
+      </div>
+      <!-- <div class="bottomMainNav-mobileOnly">
+        <div class="leftNavOption-mobileOnly">
+          signUp
+        </div>
+        <div class="middleNavOption-mobileOnly">
+          NearMe.
+        </div>
+        <div class="rightNavOption-mobileOnly">
+          signIn
+        </div>
+      </div>
+      <div class="col s1 height-onethird border-onbottom"></div> -->
+
+    </div>
+  </div>
+
+</template>
