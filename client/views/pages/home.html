@@ -33,9 +33,7 @@
     </div>
         <h5>Found Locations</h5>
           {{#if thereAreLocations}}
-            {{#each foundLocations }}
-                <button class="locationDetail" id={{ place_id }}>{{ name }} <strong>Rating:</strong> {{ rating }} <strong>Address:</strong> {{ vicinity }}</button>
-            {{/each}}
+            {{> locations}}
           {{else}}
             {{ foundLocations }}
           {{/if}}

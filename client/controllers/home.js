@@ -32,22 +32,6 @@ Template.home.events({
     target.keyword.value = '';
     target.radius.value = '';
     target.zipcode.value = '';
-  },
-  //grabs more information on location user clicks on
-  'click .locationDetail'(event){ 
-    var placeid = event.target.id;
-    console.log(placeid);
-
-    Meteor.call('getDetails', placeid, function(err, res){
-      setTimeout(function(){
-        if(err){
-          console.log(err);
-        } else{
-          console.log(res);
-          Session.set("jsonDetail", res);
-        }
-      })
-     },3000);
   }
 });
 
@@ -58,14 +42,16 @@ Template.home.helpers({
     } else{
       return true;
     }
-  },
-  foundLocations() {
-    if((Session.get("jsonBody")).length === 0){
+  }
+});
+
+//set as global helper to use in home and locations template
+Template.registerHelper( 'foundLocations', () => {
+  if((Session.get("jsonBody")).length === 0){
       return "No locations found!"
     } else{
       return Session.get("jsonBody");
     }
-  }
 });
 
 
