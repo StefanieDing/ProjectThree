@@ -1,30 +1,44 @@
 <template name="home">
   <div class="container">
     <div class="row">
-      <div class="col s12">
+      <div class="form col s12">
         <h4><center>What's good near you?</center></h4>
         <div class="row">
-    <form class="col s8">
-      <div class="row">
-        <div class="input-field col s6">
-          <input placeholder="" id="term" type="text" class="validate">
-          <label for="first_name">Term</label>
+          <form class="col s8">
+            <div class="row">
+              <div class="input-field col s6">
+                <input placeholder="" id="keyword" type="text" class="validate">
+                <label for="keyword">Keyword</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="zipcode" type="text" class="validate">
+                <label for="zipcode">Zip Code</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6">
+                <label>Radius(Miles)</label><br><br>
+                  <select id="radius" class="browser-default">
+                    <option value="" disabled selected>Choose Radius</option>
+                    <option value="8000">5</option>
+                    <option value="16000">10</option>
+                    <option value="33000">20</option>
+                    <option value="50000">30</option>
+                  </select>
+              </div>
+            </div>
+                <input type="submit" value="submit">
+          </form>
         </div>
-        <div class="input-field col s6">
-          <input id="location" type="text" class="validate">
-          <label for="last_name">Location</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s6">
-          <input id="Radius(Miles)" type="password" class="validate">
-          <label for="password">Radius</label>
-        </div>
-      </div>
-    </form>
-  </div>
-        
-      </div>
+    </div>
+        <h5>Found Locations</h5>
+          {{#if thereAreLocations}}
+            {{#each foundLocations }}
+                <button class="locationDetail" id={{ place_id }}>{{ name }} <strong>Rating:</strong> {{ rating }} <strong>Address:</strong> {{ vicinity }}</button>
+            {{/each}}
+          {{else}}
+            {{ foundLocations }}
+          {{/if}}
     </div>
   </div>
 </template>
