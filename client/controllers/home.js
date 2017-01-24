@@ -1,68 +1,87 @@
-function findLocations(radius, keyword){
-    var lat = Session.get("lat");
-    var long = Session.get("long");
-    // var APIKey = Meteor.settings.APIKey;
-    var APIKey = "AIzaSyDo0bJO1pVojjDWQaEkR-7VRIWdWxiUysE";
-    var queryURL = "https://crossorigin.me/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + lat + "," + long + "&radius="+ radius + "&keyword="+ keyword + "&opennow=true&key=" + APIKey;
-
-    console.log(queryURL);
-    // $.ajax({url: queryURL, method: 'GET'}).done(function(res) {
-    // var results = res.data;
-
-    // console.log(queryURL);
-    // console.log(res);
-    // });
-    HTTP.get( queryURL, {}, function( err, res ) {
-      if ( err ) {
-        console.log( err );
-      } else {
-        console.log( res );
-      }
-    });
-}
-
 Template.home.events({
   'submit .form'(event) {
     // Prevent default browser form submit
     event.preventDefault();
 
-    // Get value from form element
-    const target = event.target;
-    const keyword = target.keyword.value;
-    const radius = target.radius.value;
+    var target = event.target;
+    var keyword = target.keyword.value;
+    var radius = target.radius.value;
+    var zipcode = target.zipcode.value;
 
-    //runs the helper to grab all the locaton results
-    findLocations(radius, keyword);
+    //grab lat and long if user enters zipcode
+    if(zipcode){
+      findzipcode(zipcode);
+    }
 
-    //searches by zipcode only
-    // findzipcode(location)
+    //waits for zipcode to be set
+    setTimeout(function(){
+      //runs the method to grab all the locaton results
+      Meteor.call('findLocations', Session.get("lat"), Session.get("long"), radius, keyword, function(err, res){
+        if(err){
+          console.log(err);
+        } else{
+          console.log('Success!');
+          //sets jsonBody with the return
+          Session.set("jsonBody", res.data.results);
+          console.log(res.data.results);
+        }
+      })
+    },3000);
 
     // Clear form
     target.keyword.value = '';
     target.radius.value = '';
-    target.location.value = '';
+    target.zipcode.value = '';
   },
+  //grabs more information on location user clicks on
+  'click .locationDetail'(event){ 
+    var placeid = event.target.id;
+    console.log(placeid);
+
+    Meteor.call('getDetails', placeid, function(err, res){
+      setTimeout(function(){
+        if(err){
+          console.log(err);
+        } else{
+          console.log(res);
+          Session.set("jsonDetail", res);
+        }
+      })
+     },3000);
+  }
 });
 
 Template.home.helpers({
-
-  // 'locationZipcoderesults': function findzipcode(location){
-  //   var APIKey = Meteor.settings.APIKey;
-  //   var queryURL = "https://maps.googleapis.com/maps/api/geocode/json?&address=" + zipcode + "&key="+ APIKey;
-
-  //   $.ajax({url: queryURL, method: 'GET'}).done(function(response) {
-  //   var results = response.data;
-  //   //Stores latitude & longitude of zipcode
-  //   var lats=response.results[0].geometry.location.lat
-  //   var longs=response.results[0].geometry.location.lng
-  //   console.log(queryURL);
-  //   console.log(response);
-  //   Session.set({
-  //     'lat': lats,
-  //     'long':longs
-  //   })
-  //   // locationResults.function()
-  // })
-  // };
-
+  thereAreLocations() {
+    if((Session.get("jsonBody")).length === 0){
+      return false;
+    } else{
+      return true;
+    }
+  },
+  foundLocations() {
+    if((Session.get("jsonBody")).length === 0){
+      return "No locations found!"
+    } else{
+      return Session.get("jsonBody");
+    }
+  }
 });
+
+
+//if user enters zipcode instead of turning on location
+function findzipcode(zipcode){
+  var APIKey = Meteor.settings.public.APIKey;
+  var queryURL = "https://maps.googleapis.com/maps/api/geocode/json?&address=" + zipcode + "&key="+ APIKey;
+
+  $.ajax({url: queryURL, method: 'GET'}).done(function(response) {
+  var results = response.data;
+  //Stores latitude & longitude of zipcode
+  var lats=response.results[0].geometry.location.lat
+  var longs=response.results[0].geometry.location.lng
+  console.log(queryURL);
+  console.log(lats + "," + longs);
+  Session.set('lat', lats);
+  Session.set('long', longs);
+  })
+};
