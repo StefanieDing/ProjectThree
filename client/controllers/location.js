@@ -19,7 +19,7 @@ Template.locations.events({
       swal({
         title: detail.name,
         // text: detail.formatted_address,
-        text: "<a href=" + detail.url + "target='_blank'>" + detail.formatted_address + "</a>" +
+        text: "<a href=" + detail.url + ">" + detail.formatted_address + "</a>" +
           "<p>" + detail.formatted_phone_number + "</p>" +
           "<br><strong>Opening Hours:</strong>" +
           "<ul>" +
