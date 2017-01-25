@@ -3,6 +3,15 @@ Template.masterLayout.rendered = function () {
   getLocation();
 };
 
+
+Tracker.autorun(function() {
+  if(Meteor.user()){
+    $('body').addClass('pad-body');
+  } else {
+    $('body').removeClass('pad-body');
+  }
+}); 
+
 Template.masterLayout.events({
   
 })
@@ -20,16 +29,14 @@ function getLocation() {
 function recordPosition(position) {
   var latitude = position.coords.latitude;
   var longitude = position.coords.longitude;
-    // Session.set({
-    //   'lat': latitude,
-    //   'long': longitude
-    // });
-    Session.set('lat', latitude);
-    Session.set('long', longitude);
-    var savedlated = Session.get('lat');
-    var savedlonged = Session.get('long');
-    console.log(savedlated+ "," + savedlonged);
-    console.log(latitude + "," + longitude);
+
+  Session.set('lat', latitude);
+  Session.set('long', longitude);
+  var savedlated = Session.get('lat');
+  var savedlonged = Session.get('long');
+  console.log(savedlated+ "," + savedlonged);
+  console.log(latitude + "," + longitude);
 }
+
 
 
