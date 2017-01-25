@@ -2,7 +2,7 @@
   <nav>
     <div class="container">
       <div class="row">
-        <div class="col s12">
+        <div class="col s12"> 
           <div class="nav-wrapper">
             <a href="#" data-activates="slide-out" class="btn button-collapse"><i class="material-icons">menu</i></a>
             <a href="/" class="brand-logo">Open|Close</a>
@@ -16,26 +16,28 @@
                   <li><a href="/sign-in">Sign In</a></li>
                 {{/if}}
                   <li><a href="/about">About</a></li>
+                  <li><a href ="/profile">Profile</a></li>
               </ul>
                 {{#if currentUser}}
               <ul id="slide-out" class="side-nav fixed">
                 <li class="profile">
-                  <ul class="collapsible collapsible-accordion">
+                  <ul class="collapsible " data-collapsible="accordion">
                     <li class= "bold">
-                      <a class="collapsible-header  waves-effect waves-red"> Profile</a>
+                      <a class="collapsible-header  waves-effect waves-red">Profile </a>
                       <div class="collapsible-body">
                         <ul>
-                          <li><a href="profile.html"></a>Profile</li>
+                          <li style="background-color: green"><a href="profile.html">Bob's Profile</a>
+                          </li> 
                         </ul>
                       </div>
                     </li>
                     <li class= "bold">
-                      <a class="collapsible-header  waves-effect waves-red"> Messenger</a>
+                      <a class="collapsible-header  waves-effect waves-red">Messenger</a>
                       <div class="collapsible-body">
                         <ul>
-                          <li style="background-color: black"><a href="#"></a>Messenger</li>
-                          <li style="background-color: green"><a href="#"></a>Bob</li>
-                          <li style="background-color: pink"><a href="#"></a>Cindy</li>
+                          <li style="background-color: black"><a href="#">Larry</a></li>
+                          <li style="background-color: green"><a href="#">Bob</a></li>
+                          <li style="background-color: pink"><a href="#">Cindy</a></li>
                         </ul>
                       </div>
                     </li>

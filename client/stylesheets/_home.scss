@@ -16,5 +16,16 @@
 
 
 .pad-body{
-  padding-left: 300px;
+  padding-left: 241px;
+}
+
+@media #{$medium-and-down} {
+    // styles for medium screens and down
+    .pad-body {
+    padding-left: 0px;
+}
+  }
+
+  .row .col.s8 {
+     padding-left: 0px; 
 }
