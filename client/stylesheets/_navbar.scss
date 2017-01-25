@@ -21,3 +21,13 @@
   .at-social-btn, .at-btn.submit {
     min-width: 64%;
 }
+
+@media #{$medium-and-down} {
+    // styles for medium screens and down
+    .pad-body {
+    padding-left: 0px;
+    } 
+    nav .button-collapse {
+    left: 0px;
+}
+  }
