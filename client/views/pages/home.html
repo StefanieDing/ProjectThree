@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="form col s12">
-        <h5 class="homeTitle"><center>What's good near you?</center></h5>
+        <h4><center>What's good near you?</center></h4>
         <div class="row">
           <form class="col s8">
             <div class="row">
@@ -27,37 +27,16 @@
                   </select>
               </div>
             </div>
-
                 <input type="submit" value="submit">
           </form>
         </div>
-        <div class="row">
-          <div class="col s6">
-        <h5 class="resultsTitle">Open Right Now</h5>
-          <div class="resultContainer">
-               {{#if thereAreLocations}}
-               {{#each foundLocations }}
-                   <button class="locationDetail blue-grey darken-1" id={{ place_id }}> 
-                      <div class="row">
-                        <div class="col s12">
-                          <strong>Place:</strong> {{ name }}
-                        </div>
-                        <div class="col s12">
-                          <strong>Rating:</strong> {{ rating }}
-                        </div>
-                        <div class=" col s12">
-                          <strong>Address:</strong> {{ vicinity }}
-                        </div>
-                   </div>
-                   </button>
-                    {{/each}}
-                 {{else}}
-               {{ foundLocations }}
-                 {{/if}}
-          </div><!--resultcontainer-->
-          </div>
-        </div><!--rowresult-->
-      </div>
+    </div>
+        <h5>Found Locations</h5>
+          {{#if thereAreLocations}}
+            {{> locations}}
+          {{else}}
+            {{ foundLocations }}
+          {{/if}}
     </div>
   </div>
 </template>
