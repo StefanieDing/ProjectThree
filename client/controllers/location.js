@@ -8,7 +8,6 @@ Template.locations.events({
         if(err){
           console.log(err);
         } else{
-          console.log(res.data.result);
           Session.set("jsonDetail", res.data.result);
         }
       })
@@ -37,11 +36,16 @@ Template.locations.events({
       });
     },1000);
 
+  },
+  'click .favLocation'(event){
+    swal({
+      title: "Favorited!",
+      allowOutsideClick: true,
+      confirmButtonColor: "#B6242A"
+    });
+    placeid= event.target.id;
+    console.log(placeid);
   }
 });
 
-// Template.locationModal.helpers({
-//   details(){
-//     return Session.get("jsonDetail");
-//   }
-// });
+

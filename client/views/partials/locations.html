@@ -4,7 +4,8 @@
       <a class="waves-effect waves-light btn locationDetail" id={{ place_id }}>{{ name }}
       {{#if currentUser}}
         <a class="favLocation" id={{ place_id }}>
-          <i class="fa fa-heart-empty"></i>
+          <!-- <i class="fa fa-heart-o"></i> -->
+          <i class="material-icons">star</i>
         </a>
       {{/if}}
       </a>
@@ -12,23 +13,3 @@
   {{/each}}
 </template>
 
-<!-- <template name="locationModal">
-  <div class="locModal">
-    {{#each details}}
-      <h3>{{ name }}</h3>
-      <a href={{ url }}>{{ formatted_address }}</a>
-      <p>{{ formatted_phone_number }}</p>
-      <p><strong>Opening Hours:</strong></p>
-      {{#each opening_hours }}
-        {{#each weekday_text }}
-          <p>Monday: {{ Monday }}</p>
-          <p>Tuesday: {{ Tuesday }}</p>
-          <p>Wednesday: {{ Wednesday }}</p>
-          <p>Thursday: {{ Thursday }}</p>
-          <p>Friday: {{ Fridayday }}</p>
-          <p>Saturday: {{ Saturday }}</p>
-          <p>Sunday: {{ Sunday }}</p>
-        {{/each}}
-    {{/each}}
-  </div>
-</template> -->
