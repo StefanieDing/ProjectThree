@@ -13,20 +13,17 @@ Template.home.events({
       findzipcode(zipcode);
     }
 
-    //waits for zipcode to be set
-    setTimeout(function(){
-      //runs the method to grab all the locaton results
-      Meteor.call('findLocations', Session.get("lat"), Session.get("long"), radius, keyword, function(err, res){
-        if(err){
-          console.log(err);
-        } else{
-          console.log('Success!');
-          //sets jsonBody with the return
-          Session.set("jsonBody", res.data.results);
-          console.log(res.data.results);
-        }
-      })
-    },3000);
+    //runs the method to grab all the locaton results
+    Meteor.call('findLocations', Session.get("lat"), Session.get("long"), radius, keyword, function(err, res){
+      if(err){
+        console.log(err);
+      } else{
+        console.log('Success!');
+        //sets jsonBody with the return
+        Session.set("jsonBody", res.data.results);
+        console.log(res.data.results);
+      }
+    })
 
     // Clear form
     target.keyword.value = '';
