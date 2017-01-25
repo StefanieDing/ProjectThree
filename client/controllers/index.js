@@ -1,9 +1,8 @@
 Template.index.events({
-  'a .mainSearch-Button'(event) {
-    // Prevent default browser form submit
-    event.preventDefault();
 
-    $('rightMainContainer').toggle();
+  'click .mainSearch-Button': function(){
+       // code goes here
+         $('rightMainContainer').toggle();
+   }
 
-  },
 });
