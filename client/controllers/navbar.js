@@ -19,3 +19,4 @@ Template.navbar.onRendered(function(){
    });
 });
 
+
