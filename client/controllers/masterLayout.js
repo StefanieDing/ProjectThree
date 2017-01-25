@@ -3,6 +3,15 @@ Template.masterLayout.rendered = function () {
   getLocation();
 };
 
+
+Tracker.autorun(function() {
+  if(Meteor.user()){
+    $('body').addClass('pad-body');
+  } else {
+    $('body').removeClass('pad-body');
+  }
+}); 
+
 Template.masterLayout.events({
   
 })
@@ -28,5 +37,6 @@ function recordPosition(position) {
   console.log(savedlated+ "," + savedlonged);
   console.log(latitude + "," + longitude);
 }
+
 
 
