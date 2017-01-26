@@ -10,5 +10,9 @@ Meteor.startup(() => {
   if (Meteor.users.findOne(Meteor.settings.adminId)){
     Roles.addUsersToRoles(Meteor.settings.adminId, ['admin']);
   }
+
+  Meteor.publish("messages", function () {
+    return Messages.find();
+  });
 });
 
