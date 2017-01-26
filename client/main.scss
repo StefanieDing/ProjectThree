@@ -1,21 +1,11 @@
-
 @import "{poetic:materialize-scss}/sass/components/_color.scss";
-
 $body-bg: transparent;
-
 $primary-color: color("grey", "darken-4");
-
 @import "{poetic:materialize-scss}/sass/materialize.scss";
-
 @import "./stylesheets/_stickyfooter.scss";
-
 @import "./stylesheets/_loading.scss";
-
 @import "./stylesheets/_navbar.scss";
-
 @import "./stylesheets/_mobile.scss";
-
-
 @import "./stylesheets/_home.scss";
 @import "./stylesheets/_about.scss";
 @import url('https://fonts.googleapis.com/css?family=Montserrat:700');//googlefonts import into css, Montseerat
@@ -25,6 +15,10 @@ $primary-color: color("grey", "darken-4");
     font-family: 'HelloStock';
     src: url('/fonts/HelloStock.tff') format('truetype');;
 }
+
+// .waves-effect{
+//   position: initial, !important;
+// }
 
 @keyframes hatch1 {
   50% {
@@ -152,15 +146,6 @@ $primary-color: color("grey", "darken-4");
   margin-right: 0px;
 }
 
-// .rightMainContainer {
-//     display: none;
-//     position: absolute;
-//     top: 0px;
-//     width: 27.33%;
-//     height: 100vh;
-//     background-color: white;
-//     right: 0px;
-// }
 
 .slideLeft{
 	animation-name: slideLeft;

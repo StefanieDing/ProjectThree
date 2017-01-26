@@ -124,6 +124,7 @@
 
   .orTag{
     color: white;
+    width: 138%;
   }
 
   .indexBackgroundGradient{
@@ -784,6 +785,16 @@
     position: relative;
     bottom: -20%
   }
+
+  .rightMainContainer-signUp{
+    display: none;
+    position: absolute;
+    top: 0px;
+    width: 27.33%;
+    height: 100%;
+    background-color: white;
+    right: 0px;
+  }
 }
 
 
@@ -808,28 +819,28 @@
      z-index: 10;
    }
 
-  .indexBackgroundGradient{
-    position: absolute;
-    height: 100vh;
-    width: 100%;
-    background: -moz-linear-gradient(179deg, rgba(153,218,255,1) 7%, rgba(146,217,252,1) 11%, rgba(106,211,236,1) 35%, rgba(0,196,196,1) 100%); /* ff3.6+ */
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(0,196,196,1)), color-stop(65%, rgba(106,211,236,1)), color-stop(89%, rgba(146,217,252,1)), color-stop(93%, rgba(153,218,255,1))); /* safari4+,chrome */
-    background: -webkit-linear-gradient(179deg, rgba(153,218,255,1) 7%, rgba(146,217,252,1) 11%, rgba(106,211,236,1) 35%, rgba(0,196,196,1) 100%); /* safari5.1+,chrome10+ */
-    background: -o-linear-gradient(179deg, rgba(153,218,255,1) 7%, rgba(146,217,252,1) 11%, rgba(106,211,236,1) 35%, rgba(0,196,196,1) 100%); /* opera 11.10+ */
-    background: -ms-linear-gradient(179deg, rgba(153,218,255,1) 7%, rgba(146,217,252,1) 11%, rgba(106,211,236,1) 35%, rgba(0,196,196,1) 100%); /* ie10+ */
-    background: linear-gradient(271deg, rgba(153,218,255,1) 7%, rgba(146,217,252,1) 11%, rgba(106,211,236,1) 35%, rgba(0,196,196,1) 100%); /* w3c */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00C4C4', endColorstr='#99DAFF',GradientType=1 ); /* ie6-9 */
-    background-position: inherit;
-    opacity: .8;
-    text-align: center;
-    font-family: 'Montserrat', "sans-serif";
-  }
+  // .indexBackgroundGradient{
+  //   position: absolute;
+  //   height: 100vh;
+  //   width: 100%;
+  //   background: -moz-linear-gradient(179deg, rgba(153,218,255,1) 7%, rgba(146,217,252,1) 11%, rgba(106,211,236,1) 35%, rgba(0,196,196,1) 100%); /* ff3.6+ */
+  //   background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(0,196,196,1)), color-stop(65%, rgba(106,211,236,1)), color-stop(89%, rgba(146,217,252,1)), color-stop(93%, rgba(153,218,255,1))); /* safari4+,chrome */
+  //   background: -webkit-linear-gradient(179deg, rgba(153,218,255,1) 7%, rgba(146,217,252,1) 11%, rgba(106,211,236,1) 35%, rgba(0,196,196,1) 100%); /* safari5.1+,chrome10+ */
+  //   background: -o-linear-gradient(179deg, rgba(153,218,255,1) 7%, rgba(146,217,252,1) 11%, rgba(106,211,236,1) 35%, rgba(0,196,196,1) 100%); /* opera 11.10+ */
+  //   background: -ms-linear-gradient(179deg, rgba(153,218,255,1) 7%, rgba(146,217,252,1) 11%, rgba(106,211,236,1) 35%, rgba(0,196,196,1) 100%); /* ie10+ */
+  //   background: linear-gradient(271deg, rgba(153,218,255,1) 7%, rgba(146,217,252,1) 11%, rgba(106,211,236,1) 35%, rgba(0,196,196,1) 100%); /* w3c */
+  //   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00C4C4', endColorstr='#99DAFF',GradientType=1 ); /* ie6-9 */
+  //   background-position: inherit;
+  //   opacity: .8;
+  //   text-align: center;
+  //   font-family: 'Montserrat', "sans-serif";
+  // }
 
    .mainSearch {
      position: absolute;
      width: 33.3%;
      height: 20.8%;
-     right: 35.38%;
+     right: 42.38%;
      bottom: 35%;
    }
 
@@ -890,10 +901,13 @@
 
    .orTag{
      color: white;
+     width: 138%;
    }
+
    .signUp-Desktop{
 
    }
+
    .mainSearch-Button{
      padding-top: 2%;
      width: 200px;
@@ -902,19 +916,37 @@
      z-index: 10;
      font-size: 22px;
    }
+
    .rightMainContainer{
-    //  display: none;
+     display: none;
+     position: absolute;
+     top: 0px;
+     width: 27.33%;
+     height: 100%;
+     background-color: white;
+     right: 0px;
+   }
+
+   .rightMainContainer-signUp{
+     display: none;
+     position: absolute;
+     top: 0px;
+     width: 27.33%;
+     height: 100%;
+     background-color: white;
+     right: 0px;
    }
   //  this is the beginning of the search form for mobile
    .searchForm-Mobile{
      display: none;
    }
 
-   .rightMainContainer{
+   .moreDetails-page{
      display: none;
    }
 
-   .moreDetails-page{
-     display: none;
+   .buttonsTo{
+     position: absolute;
+     left: -22px;
    }
 }

@@ -1,8 +1,11 @@
 Template.index.events({
 
-  'click .mainSearch-Button': function(){
-       // code goes here
-         $('rightMainContainer').toggle();
-   }
+  'click .signIn-Desktop': function(){
+         $('.rightMainContainer').toggle();
+   },
+
+   'click .signUp-Desktop': function(){
+          $('.rightMainContainer-signUp').toggle();
+    }
 
 });
