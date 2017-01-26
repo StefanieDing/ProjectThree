@@ -1,58 +1,65 @@
 .chatContainer {
-  position: relative   !important;
-  max-width: 600px   !important;
-  margin: 0 auto   !important;
-  min-height: 100%   !important;
-  background: white   !important;
+  position: relative ;
+  max-width: 600px ;
+  margin: 0 auto ;
+  min-height: 100% ;
+  background: white ;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  padding: 0;
+  margin: 0;
 }
 
 .chatHeader {
-  background: #d2edf4   !important;
-  background-image: linear-gradient(to bottom, #d0edf5, #b4dbff 100%)   !important;
-  padding: 20px 15px 15px 15px   !important;
-  line-height: 1  !important;
-  text-align: center !important ;
+  background: #d2edf4 ;
+  background-image: linear-gradient(to bottom, #d0edf5, #b4dbff 100%) ;
+  text-align: center;
+  padding-bottom: 0;
 }
 
 .chatFooter {
-  background: #d2edf4   !important;
-  background-image: linear-gradient(to tos, #d0edf5, #b4dbff 100%)   !important;
-  position: absolute   !important;
-  bottom: 0   !important;
-  height: 85px   !important;
-  box-sizing: border-box   !important;
-  padding: 30px 50px 15px 15px   !important;
-  width: 100%   !important;
+  background: #d2edf4 ;
+  background-image: linear-gradient(to tos, #d0edf5, #b4dbff 100%) ;
+  position: absolute ;
+  bottom: 0 ;
+  height: 85px ;
+  box-sizing: border-box ;
+  padding: 30px 50px 15px 15px ;
+  width: 100% ;
 }
 
 .chatForm {
-  margin-top: -10px   !important;
-  margin-bottom: 10px   !important;
-  position: relative   !important;
+  margin-top: -10px ;
+  margin-bottom: 10px ;
+  position: relative ;
 }
 
 .new-message input {
-  box-sizing: border-box   !important;
-  padding: 8px 5px   !important;
-  width: 100%   !important;
-  padding-right: 80px   !important;
-  font-size: 1em   !important;
+  box-sizing: border-box ;
+  padding: 8px 5px ;
+  width: 100% ;
+  padding-right: 80px ;
+  font-size: 1em ;
 }
 
 .new-message input:focus{
-  outline: 0   !important;
+  outline: 0 ;
 }
 
 .message-window {
-  position: absolute   !important;
-  top: 80px   !important;
-  bottom: 70px   !important;
-  width: 100%   !important;
-  max-width: 600px   !important;
-  margin: 0   !important;
-  padding: 0   !important;
-  background: white   !important;
-  overflow: scroll   !important;
+  position: absolute ;
+  top: 80px ;
+  bottom: 70px;
+  width: 100% ;
+  max-width: 600px ;
+  margin: 0 ;
+  padding: 0 ;
+  background: white ;
+  overflow: scroll ;
 }
 
 

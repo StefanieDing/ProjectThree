@@ -9,7 +9,7 @@ Meteor.methods({
     Messages.insert({
       messageText: message,
       createdAt: new Date(),
-      username: "Anonymous"  // <-adds real username
+      username: Meteor.user().emails[0].address  // grabs user email address
     });
   }
 });

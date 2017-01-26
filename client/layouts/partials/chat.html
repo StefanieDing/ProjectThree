@@ -1,41 +1,32 @@
-<template name="chat2">
-  <div class="container chat-container">
-    <div class="row">
-        <!-- <section class="header">
-        <h4>Chat with someone</h4>
-        </section> -->
-        <ul class="collection col s12 message-window">
-            <li class="collection-item avatar">
-              <img src="images/yuna.jpg" alt="" class="circle">
-              <span class="title">Title</span>
-              <p>First Line <br>
-                 Second Line
-              </p>
-              <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-            </li>
-            <!-- chat messages here -->
-            {{#each recentMessages}}
-              {{> message}}
-            {{/each}}
-            <!-- more-messages button -->
-            {{#momentum plugin="fade"}}
-              {{#if thereAreUnreadMessages}}
-                <button class="more-messages">New Messages &#x25BE;</button>
-              {{/if}}
-            {{/momentum}}
-        </ul>
-        <footer class="chat-footer col s12">
-          {{#if currentUser}}
-            <form class="new-message">
-              <input type="text" name="text" placeholder="Add a message" autocomplete="off"/>
-            </form>
-          {{/if}}
-        </footer>
-    </div>
+<template name="chat">
+  <div class="chatContainer">
+    <header class="chatHeader">
+      <h5>Type a message to begin!</h5>
+    </header>
+    
+    <!-- chat messages here -->
+    <ul class="message-window">
+      {{#each recentMessages}}
+        {{> message}}
+      {{/each}}
+    </ul>
+
+    <!-- more-messages button -->
+    {{#momentum plugin="fade"}}
+      {{#if thereAreUnreadMessages}}
+        <button class="more-messages">New Messages &#x25BE;</button>
+      {{/if}}
+    {{/momentum}}
+
+    <footer class="chatFooter">
+        <form class="new-message chatForm">
+          <input type="text" name="text" placeholder="Add a message" autocomplete="off"/>
+        </form>
+    </footer>
   </div>
 </template>
 
-<template name="message2">
+<template name="message">
   <li class="message">
     <div class="username">{{username}}</div>
     <div class="message-text">{{messageText}}</div>
