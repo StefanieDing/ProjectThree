@@ -1,5 +1,3 @@
-import { Meteor } from 'meteor/meteor';
-
 Template.navbar.helpers({
   // check if user is an admin
   'isAdminUser': function() {
@@ -25,5 +23,18 @@ Meteor.subscribe('allEmails');
 Template.ListUsers.helpers({
   allUsers(){ return Meteor.users.find({}); },
   email(){ return this.emails[0].address; }
+});
+
+Template.ListUsers.events({
+  'click li': function(event){
+    var userEmail = $(event.target).closest('a').html();
+    console.log(userEmail);
+
+    if (userEmail) {
+      Session.set("chatWindow", true);
+    } else {
+      Session.set("chatWindow", false)
+    }
+  }
 });
 

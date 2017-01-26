@@ -519,7 +519,7 @@
   .noPositionRel{
     position: initial;
   }
-  
+
   .indexBackgroundGradient{
     position: absolute;
     height: 100vh;
@@ -769,6 +769,27 @@
     background-color: white;
     right: 0px;
   }
+
+  nav .nav-wrapper form, nav .nav-wrapper form .input-field{
+    height: 100%;
+  }
+
+  .mainLogoIndex{
+    height: 200px;
+
+  }
+
+  .closeContainer{
+    float:left;
+    font-size: 20px;
+    font-weight: 900;
+  }
+  .closeRightDiv-Tag{
+    position: absolute;
+    top: 0px;
+    cursor: pointer;
+  }
+
 }
 
 
@@ -814,7 +835,7 @@
      position: absolute;
      width: 33.3%;
      height: 20.8%;
-     right: 42.38%;
+     right: 33.38%;
      bottom: 35%;
    }
 
@@ -923,4 +944,31 @@
      position: absolute;
      left: -22px;
    }
+
+   .wrapperNav-MainPage{
+     float: right;
+     background-color: #E57373
+   }
+
+   nav .nav-wrapper form, nav .nav-wrapper form .input-field{
+     height: 100%;
+   }
+
+   .mainLogoIndex{
+     height: 200px;
+
+   }
+
+   .closeContainer{
+     float:left;
+     font-size: 20px;
+     font-weight: 900;
+   }
+   .closeRightDiv-Tag{
+     position: absolute;
+     top: 0px;
+     cursor: pointer;
+     z-index: 1000;
+   }
+
 }
