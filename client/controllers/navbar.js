@@ -27,3 +27,16 @@ Template.ListUsers.helpers({
   email(){ return this.emails[0].address; }
 });
 
+Template.ListUsers.events({
+  'click li': function(event){
+    var userEmail = $(event.target).closest('a').html();
+    console.log(userEmail);
+
+    if (userEmail) {
+       return Session.get("chatWindow");
+    } else {
+      console.log("no email");
+    }
+  }
+});
+

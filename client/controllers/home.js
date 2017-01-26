@@ -68,3 +68,15 @@ function findzipcode(zipcode){
   Session.set('long', longs);
   })
 };
+
+Template.chat.helpers({
+ thereIsEmail() {
+   if((Session.get("chatWindow")) === true){
+    console.log("true");
+     return true;
+   } else{
+     return false;
+   }
+ }
+});
+
