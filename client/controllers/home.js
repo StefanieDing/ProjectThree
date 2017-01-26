@@ -2,6 +2,10 @@ Template.home.events({
   'submit .form'(event) {
     // Prevent default browser form submit
     event.preventDefault();
+     $('.submitCss').addClass('clicked')
+       setTimeout(function(){
+      $(".clicked").removeClass("clicked")
+      },1500);
 
     var target = event.target;
     var keyword = target.keyword.value;
