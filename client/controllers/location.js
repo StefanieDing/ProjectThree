@@ -38,6 +38,7 @@ Template.locations.events({
 
   },
   'click .favLocation'(event){
+    $(this).innerHTML("favorite");
     swal({
       title: "Favorited!",
       allowOutsideClick: true,
@@ -45,9 +46,6 @@ Template.locations.events({
     });
     placeid= event.target.id;
     console.log(placeid);
-  },
-  'mouseover .favoriteBorder'(){
-    $(".favoriteBorder").addClass("filled_heart");
   }
 });
 

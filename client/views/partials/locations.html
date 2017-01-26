@@ -2,10 +2,11 @@
   {{#each foundLocations }}
     <ul>
       <a class="waves-effect waves-light btn locationDetail" id={{ place_id }}>{{ name }}
+      <i class="fa fa-heart-o"></i>
       {{#if currentUser}}
-        <a class="favLocation" id={{ place_id }}>
-          <span>♡</span>
-        </a>
+        <!-- <span>♡</span> -->
+        <i class="favLocation material-icons" id={{ place_id }}>favorite_border</i>
+        <!-- <i class="fa fa-heart-o"></i> -->
       {{/if}}
       </a>
     </ul>
