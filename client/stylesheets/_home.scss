@@ -1,11 +1,11 @@
 .row .col.s8 {
     width: 66.66667%;
     margin-left: auto;
-    /* left: auto; */
-    /* right: auto; */
-    
     padding-left:300px;
 }
+
+.pad-body{
+  padding-left: 300px;
 
     @media #{$medium-and-down} {
     // styles for medium screens and down
@@ -105,17 +105,3 @@
   100% { padding-left: 6px; }
 }
 
-.pad-body{
-  padding-left: 241px;
-}
-
-@media #{$medium-and-down} {
-    // styles for medium screens and down
-    .pad-body {
-    padding-left: 0px;
-}
-  }
-
-  .row .col.s8 {
-     padding-left: 0px; 
-}
