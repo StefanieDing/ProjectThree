@@ -8,6 +8,7 @@
 
     .btn, .btn-large {
       background-color: #b51212;
+      left: 100px;
     }
 
      @media #{$medium-and-down} {
@@ -15,4 +16,18 @@
     .side-nav {
     transform:translate(-100px)
     }
+  }
+
+  .at-social-btn, .at-btn.submit {
+    min-width: 64%;
+}
+
+@media #{$medium-and-down} {
+    // styles for medium screens and down
+    .pad-body {
+    padding-left: 0px;
+    } 
+    nav .button-collapse {
+    left: 0px;
+}
   }
