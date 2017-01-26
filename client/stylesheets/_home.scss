@@ -14,34 +14,6 @@
   }
   }
 
-.homeTitle{
-  font-weight: 300;
-  font-size: 30px;
-
-
-}
-
-/*******Results Style********/
-
-
-.resultsTitle{
-  font-family: pacifico;
-  font-weight: 100;
-  color: black;
-  font-size:25px;
-}
-
-
-.resultContainer {
-
-  font-weight: 300;
-  color: white;
-}
-
-
-.innerStyle{
-  margin-top:8px;
-} 
 
 /****** Result Button Animation ******/
 
@@ -133,46 +105,4 @@
   100% { padding-left: 6px; }
 }
 
-
-/************** next ccs3 animation**********/
-.changes {
-
-  font-weight: 100;
-  border: 0.5px solid #A6E0EE;
-  position: relative;
-  padding-right: 30px;
-  display: block;
-  cursor: pointer;
-  
-  .resultsSVG {
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0; 
-    width: 100%;
-
-  }
-  
-  rect {
-    fill: none;
-    stroke: #fff;
-    stroke-width: 1;
-    stroke-dasharray: 422, 0;
-  }
-}
-
-.changes:hover {
-
-  font-weight: 400;
-  letter-spacing: 1px;
-  
-  rect {
-   border-color: #2c0d48;
-    stroke-width: 5;
-    stroke-dasharray: 15, 310;
-    stroke-dashoffset: 48;
-    transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
-  }
-
-}
 
