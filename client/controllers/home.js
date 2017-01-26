@@ -39,7 +39,15 @@ Template.home.helpers({
     } else{
       return true;
     }
-  }
+  },
+  thereIsEmail() {
+   if((Session.get("chatWindow")) === true){
+    console.log("true");
+    return true;
+   } else{
+    return false;
+   }
+ }
 });
 
 //set as global helper to use in home and locations template
@@ -69,14 +77,5 @@ function findzipcode(zipcode){
   })
 };
 
-Template.chat.helpers({
- thereIsEmail() {
-   if((Session.get("chatWindow")) === true){
-    console.log("true");
-     return true;
-   } else{
-     return false;
-   }
- }
-});
+
 
