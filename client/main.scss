@@ -16,10 +16,9 @@ $primary-color: color("grey", "darken-4");
     src: url('/fonts/HelloStock.tff') format('truetype');;
 }
 
-// .waves-effect{
-//   position: initial, !important;
-// }
-
+body{
+    overflow: hidden;
+}
 @keyframes hatch1 {
   50% {
     transform: rotate(-2deg);
@@ -119,6 +118,9 @@ $primary-color: color("grey", "darken-4");
 //
 // }
 
+.closeContainer{
+  z-index: 1000;
+}
 .logo-Mobile{
   @extend .red-text, .text-lighten-1;
   font-family: 'Vampiro One', cursive;
@@ -148,6 +150,7 @@ $primary-color: color("grey", "darken-4");
 
 
 .slideLeft{
+  overflow: hidden;
 	animation-name: slideLeft;
 	-webkit-animation-name: slideLeft;
 
