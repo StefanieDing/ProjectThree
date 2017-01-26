@@ -14,5 +14,9 @@ Meteor.startup(() => {
   Meteor.publish("messages", function () {
     return Messages.find();
   });
+
+  Meteor.publish('allEmails', function (){ 
+  return Meteor.users.find({},{fields: { emails: 1 }});
+});
 });
 

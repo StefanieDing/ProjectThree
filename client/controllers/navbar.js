@@ -1,3 +1,5 @@
+import { Meteor } from 'meteor/meteor';
+
 Template.navbar.helpers({
   // check if user is an admin
   'isAdminUser': function() {
@@ -17,4 +19,11 @@ Template.navbar.onRendered(function(){
   }, 1000)
 });
 
+// Displaying each user email
+Meteor.subscribe('allEmails');
+
+Template.ListUsers.helpers({
+  allUsers(){ return Meteor.users.find({}); },
+  email(){ return this.emails[0].address; }
+});
 
