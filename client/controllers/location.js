@@ -1,6 +1,8 @@
 Template.locations.events({
   //grabs more information on location user clicks on
   'click .locationDetail'(event){ 
+    event.stopPropagation();
+    event.preventDefault();
     var placeid = event.target.id;
     console.log(placeid);
 
@@ -38,7 +40,10 @@ Template.locations.events({
 
   },
   'click .favLocation'(event){
-    $(this).innerHTML("favorite");
+    event.stopPropagation();
+    event.preventDefault();
+    $(event.target).next("i").removeClass("hide");
+    $(event.target).remove();
     swal({
       title: "Favorited!",
       allowOutsideClick: true,
