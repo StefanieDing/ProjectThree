@@ -1,0 +1,14 @@
+<template name="locations">
+  {{#each foundLocations }}
+    <ul>
+      <a class="waves-effect waves-light btn locationDetail" id={{ place_id }}>{{ name }}
+      {{#if currentUser}}
+        <a class="favLocation" id={{ place_id }}>
+          <span>♡</span>
+        </a>
+      {{/if}}
+      </a>
+    </ul>
+  {{/each}}
+</template>
+
