@@ -11,14 +11,11 @@ $primary-color: color("grey", "darken-4");
 @import url('https://fonts.googleapis.com/css?family=Montserrat:700');//googlefonts import into css, Montseerat
 @import url('https://fonts.googleapis.com/css?family=Vampiro+One');
 
-@font-face {
-    font-family: 'HelloStock';
-    src: url('/fonts/HelloStock.tff') format('truetype');;
-}
 
 body{
     overflow: hidden;
 }
+
 @keyframes hatch1 {
   50% {
     transform: rotate(-2deg);
@@ -82,7 +79,6 @@ body{
   }
 }
 
-
 .indexBackgroundPhoto{
   position: absolute;
   height: 100vh;
@@ -121,10 +117,12 @@ body{
 .closeContainer{
   z-index: 1000;
 }
+
 .logo-Mobile{
   @extend .red-text, .text-lighten-1;
   font-family: 'Vampiro One', cursive;
 }
+
 .hatch{
 	animation-name: hatch;
 	-webkit-animation-name: hatch;
@@ -142,12 +140,9 @@ body{
 	visibility: visible !important;
 }
 
-
-
 .loginMainButton{
   margin-right: 0px;
 }
-
 
 .slideLeft{
   overflow: hidden;
@@ -241,7 +236,6 @@ input.passwordMain{
 }
 
 .signUpMain{
-  // position: absolute;
   display: inline-flex;
   background-color: transparent;
   border: none;
@@ -253,4 +247,3 @@ input.passwordMain{
   margin: 8px;
   color: rgb(209,209,209);
 }
-
