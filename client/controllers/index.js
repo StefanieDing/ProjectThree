@@ -1,9 +1,16 @@
 Template.index.events({
-  'a .mainSearch-Button'(event) {
-    // Prevent default browser form submit
-    event.preventDefault();
 
-    $('rightMainContainer').toggle();
+  'click .signIn-Desktop': function(){
+         $('.rightMainContainer').toggle();
 
-  },
+   },
+   'click .closeContainer': function(){
+          $('.rightMainContainer').toggle();
+
+    },
+
+   'click .signUp-Desktop': function(){
+          $('.rightMainContainer-signUp').toggle();
+    }
+
 });
