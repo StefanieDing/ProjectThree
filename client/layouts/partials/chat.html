@@ -1,0 +1,34 @@
+<template name="chat">
+  <div class="chatContainer">
+    <header class="chatHeader">
+      <h5>Type a message to begin!</h5>
+    </header>
+    
+    <!-- chat messages here -->
+    <ul class="message-window">
+      {{#each recentMessages}}
+        {{> message}}
+      {{/each}}
+    </ul>
+
+    <!-- more-messages button -->
+    {{#momentum plugin="fade"}}
+      {{#if thereAreUnreadMessages}}
+        <button class="more-messages">New Messages &#x25BE;</button>
+      {{/if}}
+    {{/momentum}}
+
+    <footer class="chatFooter">
+        <form class="new-message chatForm">
+          <input type="text" name="text" placeholder="Add a message" autocomplete="off"/>
+        </form>
+    </footer>
+  </div>
+</template>
+
+<template name="message">
+  <li class="message">
+    <div class="username">{{username}}</div>
+    <div class="message-text">{{messageText}}</div>
+  </li>
+</template>

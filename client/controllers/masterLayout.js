@@ -7,6 +7,9 @@ Template.masterLayout.rendered = function () {
 Tracker.autorun(function() {
   if(Meteor.user()){
     $('body').addClass('pad-body');
+    setTimeout(function(){
+      $('.collapsible').collapsible();
+    }, 200)
   } else {
     $('body').removeClass('pad-body');
   }
