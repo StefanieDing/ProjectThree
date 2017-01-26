@@ -1,7 +1,7 @@
 body {
   display: flex;
   min-height: 100vh;
-  flex-direction: column;  
+  flex-direction: column;
 }
 
 main {
@@ -17,7 +17,6 @@ main {
      @media #{$medium-and-down} {
     // styles for medium screens and down
   body{
-    padding-left:0px
+    padding-left:0px;
   }
   }
-
