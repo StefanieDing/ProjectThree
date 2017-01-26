@@ -96,3 +96,8 @@
   50% { padding-left: 30px; }
   100% { padding-left: 6px; }
 }
+ 
+.locationBox {
+  height: 250px;
+  overflow-y: scroll;
+}

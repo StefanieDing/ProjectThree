@@ -1,6 +1,3 @@
-import { Meteor } from 'meteor/meteor';
-
-
 var autoScrollingIsActive = false;
 // reactive var
 thereAreUnreadMessages = new ReactiveVar(false);

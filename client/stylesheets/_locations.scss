@@ -1,11 +1,4 @@
 .locationDetail {
-  
-}
-
-.fa {
-  &:hover:before{
-    content: <i class="fa fa-heart"></i>;
-    position: absolute;
-    color: #B6242A;
-  }
+  padding: 2px;
+  color: #cd3331;
 }
