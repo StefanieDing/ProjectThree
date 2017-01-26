@@ -12,7 +12,9 @@ Template.navbar.onRendered(function(){
     closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
     draggable: true // Choose whether you can drag to open on touch screens      
   });
-  $('.collapsible').collapsible();
+  setTimeout(function(){
+    $('.collapsible').collapsible();
+  }, 1000)
 });
 
 
