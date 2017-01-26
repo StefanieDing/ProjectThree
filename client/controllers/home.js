@@ -6,7 +6,7 @@ Template.home.events({
      $('.submitCss').addClass('clicked')
        setTimeout(function(){
       $(".clicked").removeClass("clicked")
-      },3000);
+      },1500);
 
     var target = event.target;
     var keyword = target.keyword.value;
@@ -30,7 +30,8 @@ Template.home.events({
           console.log('Success!');
           //sets jsonBody with the return
           Session.set("jsonBody", res.data.results);
-          console.log(res.data.results);
+          // console.log(res.data.results);
+          console.log(res.data.results.opening_hours);
         }
       })
     },3000);
