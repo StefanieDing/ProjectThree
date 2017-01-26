@@ -34,7 +34,7 @@ Template.locations.events({
           "</ul>",
         html: true,
         allowOutsideClick: true,
-        confirmButtonColor: "#cd3331"
+        confirmButtonColor: "#B6242A"
       });
     },1000);
 
@@ -47,7 +47,7 @@ Template.locations.events({
     swal({
       title: "Favorited!",
       allowOutsideClick: true,
-      confirmButtonColor: "#cd3331"
+      confirmButtonColor: "#B6242A"
     });
     placeid= event.target.id;
     console.log(placeid);
