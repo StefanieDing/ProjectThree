@@ -1,9 +1,9 @@
 Template.saved.events({
-  'click .favoritedDetails'(events){
+  'click .favoritedDetails'(event){
     event.stopPropagation();
     event.preventDefault();
 
-    var placeid = events.target.id;
+    var placeid = event.target.id;
     var detail = Locations.find({ place_id: placeid }).fetch()[0];
     console.log(detail);
     swal({
@@ -26,4 +26,33 @@ Template.saved.events({
         confirmButtonColor: "#d32f2f"
       });
   },
+  'click .deleteLocation'(event){
+    event.stopPropagation();
+    event.preventDefault();
+
+    id = event.target.id;
+    console.log(id);
+      swal({
+        title: "Delete",
+        text: "Are you sure you want to delete this location?",
+        showCancelButton: true,
+        confirmButtonColor: "#d32f2f",
+        confirmButtonText: "Delete!",
+        closeOnConfirm: false,
+        type: "warning",
+        allowOutsideClick: true
+      },
+      function(){
+        swal({
+          title: "Deleted!",
+          text: "This location was deleted from your favorites.",
+          type: "error",
+          confirmButtonColor: "#d32f2f",
+          allowOutsideClick: true
+        });
+
+        Locations.remove({ _id: id });
+
+      });
+  }
 });
