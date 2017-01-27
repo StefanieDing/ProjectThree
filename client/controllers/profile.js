@@ -16,3 +16,14 @@ Template.profile.onRendered(function(){
   //   $('.collapsible').collapsible();
   // }, 1000)
 });
+
+Template.profile.helpers({
+  thereAreSavedLocations() {
+    var myLocations = Locations.find({place_id}).fetch();
+    if(myLocations.length === 0){
+      return false;
+    } else{
+      return true;
+    }
+  },
+});

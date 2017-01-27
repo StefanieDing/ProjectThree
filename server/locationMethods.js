@@ -16,8 +16,7 @@ Meteor.methods({
     return results;
   },
   saveLocation: function(placeid){
-    Locations.save({
-      place_id: placeid
-    });
+    Locations.insert({ place_id: placeid });
+    console.log('Added new location.');
   }
 });

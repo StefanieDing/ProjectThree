@@ -55,6 +55,12 @@
       <div class="row">
         <div class="col s9">
           <!--  favorites-->
+          <h5>Favorited Locations</h5>
+            {{#if thereAreSavedLocations}}
+              {{> savedLoc }}
+            {{else}}
+              {{ savedLoc }}
+            {{/if}}
         </div>
         <div class="col s3">
             <!--  chat colum-->

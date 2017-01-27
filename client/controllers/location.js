@@ -69,9 +69,9 @@ Template.locations.events({
     //fills heart when clicked
     $(event.target).next("i").removeClass("hide");
     $(event.target).remove();
-    });
 
     Meteor.call('saveLocation', placeid);
+    });
   }
 });
 
