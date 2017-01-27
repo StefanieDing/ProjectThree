@@ -42,15 +42,48 @@ Template.locations.events({
   'click .favLocation'(event){
     event.stopPropagation();
     event.preventDefault();
+
+    placeid= event.target.id;
+    console.log("PlaceID", placeid);
+
+    //confirm favorite
+    swal({
+      title: "Favorite?",
+      text: "Are you sure you want to save this location?",
+      showCancelButton: true,
+      confirmButtonColor: "#d32f2f",
+      confirmButtonText: "Favorite!",
+      closeOnConfirm: false,
+      imageUrl: "img/heart-icon.png",
+      allowOutsideClick: true
+    },
+    function(){
+      swal({
+        title: "Favorited!",
+        text: "This location was saved to your favorites.",
+        type: "success",
+        confirmButtonColor: "#d32f2f",
+        allowOutsideClick: true
+      });
+
+    //fills heart when clicked
     $(event.target).next("i").removeClass("hide");
     $(event.target).remove();
-    swal({
-      title: "Favorited!",
-      allowOutsideClick: true,
-      confirmButtonColor: "#d32f2f"
+
+    //grabs detail of favorited
+    Meteor.call('getDetails', placeid, function(err, res){
+        if(err){
+          console.log(err);
+        } else{
+          Session.set("jsonDetail", res.data.result);
+          // console.log(Session.get("jsonDetail"));
+        }
+
+        //saves the details into db
+        Meteor.call('saveLocation', placeid, Session.get("jsonDetail"));
+        });
     });
-    placeid= event.target.id;
-    console.log(placeid);
+
   }
 });
 
