@@ -13,7 +13,8 @@ $primary-color: color("grey", "darken-4");
 
 
 body{
-    overflow: scroll;
+    // overflow: hidden;
+    overflow-y: scroll;
 }
 
 @keyframes hatch1 {
