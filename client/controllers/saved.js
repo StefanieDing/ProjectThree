@@ -1,3 +1,5 @@
+Meteor.subscribe('remove');
+
 Template.saved.events({
   'click .favoritedDetails'(event){
     event.stopPropagation();
@@ -30,8 +32,6 @@ Template.saved.events({
     event.stopPropagation();
     event.preventDefault();
 
-    id = event.target.id;
-    console.log(id);
       swal({
         title: "Delete",
         text: "Are you sure you want to delete this location?",
@@ -51,7 +51,7 @@ Template.saved.events({
           allowOutsideClick: true
         });
 
-        Locations.remove({ _id: id });
+        Meteor.call("removeLocation", event.target.id);
 
       });
   }
