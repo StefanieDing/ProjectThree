@@ -13,7 +13,14 @@
     </div>
   </nav>
 
-
+<div class="favorites">
+  <h5>Favorited Locations</h5>
+    {{#if thereAreSavedLocations}}
+      {{> saved }}
+    {{else}}
+      {{ savedLoc }}
+    {{/if}}
+</div>
 
   <!-- Main div of porfolio holds the side bar -->
       <ul id="slide-out" class="side-nav">

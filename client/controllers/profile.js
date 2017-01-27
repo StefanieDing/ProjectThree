@@ -16,3 +16,23 @@ Template.profile.onRendered(function(){
   //   $('.collapsible').collapsible();
   // }, 1000)
 });
+
+var myLocations = Locations.find().fetch();
+
+Template.profile.helpers({
+  thereAreSavedLocations() {
+    if(myLocations.length != 0){
+      return true;
+    } else{
+      return false;
+    }
+  },
+});
+
+Template.registerHelper( 'savedLoc', () => {
+  if(myLocations.length === 0){
+    return "There are no saved locations.";
+  } else{
+    return Locations.find({});
+  }
+});

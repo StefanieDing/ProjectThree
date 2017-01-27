@@ -1,0 +1,9 @@
+<Template name="saved">
+  {{#each savedLoc }}
+    <ul>
+      <a class="waves-effect waves-light btn favoritedLocation" id={{ place_id }}>{{ name }}
+        <i class="deleteLocation material-icons" id={{ place_id }}>delete</i>
+      </a>
+    </ul>
+  {{/each}}
+</Template>
