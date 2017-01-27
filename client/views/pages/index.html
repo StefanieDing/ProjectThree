@@ -103,30 +103,29 @@
 
 
       <div class="rightMainContainer slideLeft">
-        <div class="closeContainer"> X </div>
         <div class="logoMainContainer">
+          <div class="closeContainer"> <p class="closeRightDiv-Tag">X</p> </div>
             <!-- <h1 class="logoMain">Open Close </h1> -->
             <img src="img/logo-black.png" alt="Open Close" width="150" class="logoMain">
         </div>
         <div class="loginform-Main">
           <div class="login">
             <h4 >Login</h4>
-            <form method="post">
-              <i class="small material-icons iCGM">perm_identity</i><input type="text"  class="usernameMain" name="u" placeholder="Username" required="required" />
-              <i class="small material-icons iCGM">lock_outline</i><input type="password" class="passwordMain" name="p" placeholder="Password" required="required" />
+            <form method="post" id="login-form">
+              <i class="small material-icons iCGM">perm_identity</i><input type="text"  id="login-username" class="usernameMain" name="u" placeholder="Username" required="required" />
+              <i class="small material-icons iCGM">lock_outline</i><input type="password" id="login-password" class="passwordMain" name="p" placeholder="Password" required="required" />
               <div class="buttonsTo">
               <button type="submit" class="waves-effect waves-light btn red lighten-2 loginMainbutton  noPositionRel">Log In</button>
-              <button type="submit" class="waves-effect waves-light btn red lighten-2 signUpMain  noPositionRel">Sign Up</button>
+              <a href="/sign-up" type="submit" class="waves-effect waves-light btn red lighten-2 signUpMain  noPositionRel">Sign Up</a>
             </div>
             </form>
           </div>
         </div>
       </div>
 
-
+<!--
       <div class="rightMainContainer-signUp slideLeft">
         <div class="logoMainContainer">
-            <!-- <h1 class="logoMain">Open Close </h1> -->
             <img src="img/logo-black.png" alt="Open Close" width="150" class="logoMain">
         </div>
         <div class="loginform-Main">
@@ -142,7 +141,7 @@
             </form>
           </div>
         </div>
-      </div>
+      </div> -->
 
 
 
@@ -156,20 +155,22 @@
       <div class="pinMainContainer hatch wobble">
       </div>
       <div class="mainSearch">
-        <div class="waves-effect waves-light btn mainSearch-Button red lighten-2">
-          <!-- <div class="searchForm-trans scale-transition scale-out">
+        <nav class="wrapperNav-MainPage scale-transition scale-out">
+          <div class="nav-wrapper">
             <form>
-              <div class="input-field scale-transition">
-                <input id="search" type="search" required>
+              <div class="input-field">
+                <input id="search" class="searchField-Main" placeholder="Search..." type="search" required>
                 <label class="label-icon" for="search"><i class="material-icons">search</i></label>
                 <i class="material-icons">close</i>
               </div>
             </form>
-          </div> -->
-          <i class="material-icons right">search</i>Search</div>
+          </div>
+        </nav>
+        <!-- <div class="waves-effect waves-light btn mainSearch-Button red lighten-2">
+          <i class="material-icons right">search</i>Search</div> -->
         <p class="orTag"> or </p>
         <a class="waves-effect waves-light btn red lighten-2 signButtons signIn-Desktop">Log In</a>
-        <a class="waves-effect waves-light btn red lighten-2 signButtons signUp-Desktop">SignUp</a>
+        <a href="/sign-up" class="waves-effect waves-light btn red lighten-2 signButtons signUp-Desktop">SignUp</a>
       </div>
       <div class="col s1 height-onethird border-onbottom"></div>
       </div>
