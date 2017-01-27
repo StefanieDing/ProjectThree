@@ -17,13 +17,22 @@ Template.profile.onRendered(function(){
   // }, 1000)
 });
 
+var myLocations = Locations.find({});
+
 Template.profile.helpers({
   thereAreSavedLocations() {
-    var myLocations = Locations.find({place_id}).fetch();
     if(myLocations.length === 0){
       return false;
     } else{
       return true;
     }
   },
+});
+
+Template.registerHelper( 'savedLoc', () => {
+    if(myLocations.length === 0){
+      return "There are no saved locations.";
+    } else{
+      return myLocations;
+    }
 });

@@ -70,8 +70,20 @@ Template.locations.events({
     $(event.target).next("i").removeClass("hide");
     $(event.target).remove();
 
-    Meteor.call('saveLocation', placeid);
+    //grabs detail of favorited
+    Meteor.call('getDetails', placeid, function(err, res){
+        if(err){
+          console.log(err);
+        } else{
+          Session.set("jsonDetail", res.data.result);
+          // console.log(Session.get("jsonDetail"));
+        }
+
+        //saves the details into db
+        Meteor.call('saveLocation', placeid, Session.get("jsonDetail"));
+        });
     });
+
   }
 });
 
