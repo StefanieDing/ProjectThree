@@ -9,8 +9,8 @@ Template.home.events({
 
     var target = event.target;
     var keyword = target.keyword.value;
-    var radius = target.radius.value;
-    var zipcode = target.zipcode.value;
+    var radius = target.radius.value || '10000';
+    var zipcode = target.zipcode.value || '08861';
 
     //grab lat and long if user enters zipcode
     if(zipcode){
@@ -79,9 +79,6 @@ function findzipcode(zipcode){
   Session.set('lat', lats);
   Session.set('long', longs);
   })
-<<<<<<< HEAD
-};
-=======
 };
 
 
@@ -95,4 +92,3 @@ Template.chat.helpers({
    }
  }
 });
->>>>>>> 0098ab5facf9d992fc3f2bc9f88b6273a492b3ad
