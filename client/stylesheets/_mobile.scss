@@ -1,4 +1,4 @@
-@media screen and (max-width:299px) and (min-width:0px) {
+@media screen and (max-width:800px) and (min-width:525px) {
   .indexGM{
     background-color: rgb(253,253,253);
     text-align: center;
@@ -9,7 +9,7 @@
   .pinMainContainer{
     top: 15%;
     position: absolute;
-    right: 33%;
+    right: 39%;
     height: 175px;
     width: 120px;
     background-image: url(img/pin.png);
@@ -60,7 +60,7 @@
   .mainSearch {
     position: absolute;
     top: 44.38%;
-    right: 18.38%;
+    right: 25.38%;
   }
 
   .searchLogo{
@@ -126,6 +126,14 @@
     color: white;
   }
 
+  .signButtons{
+    position: initial;
+  }
+
+  .noPositionRel{
+    position: initial;
+  }
+
   .indexBackgroundGradient{
     position: absolute;
     height: 100vh;
@@ -139,6 +147,7 @@
   }
 
   .mainSearch-Button{
+    position: initial;
     padding-top: 5%;
     width: 200px;
     height: 60px;
@@ -147,23 +156,16 @@
     font-size: 22px;
   }
 
-  .signIn-Desktop{
-
-  }
-
   .signUpMain{
-    // font-size: 20px
     margin-left: 10px;
     float: left;
   }
 
   .loginMainbutton{
     float: left;
-    // margin-right: 10px;
   }
 
   .searchForm-Mobile{
-    // display: none;
     position: absolute;
     width: 100%;
     height: 100vh;
@@ -181,17 +183,6 @@
     -webkit-box-shadow: 0 10px 6px -6px #777;
      -moz-box-shadow: 0 10px 6px -6px #777;
           box-shadow: 0 10px 6px -6px #777;
-
-
-
-    // padding-top: 7px;
-    // position: fixed;
-    // background-color: whitesmoke;
-    // height: 160px;
-    // width: 50%;
-    // bottom: 0px;
-    // border-top-right-radius: 200px;
-
   }
 
 
@@ -249,10 +240,7 @@
   .bottomNav-buttons:active{
     color: rgb(229,115,115);
   }
-  .border-light{
-    // border-top: 2px solid #ccc;
 
-  }
   .tagforIcons{
     width: 25%;
     float: left;
@@ -359,21 +347,18 @@
     position: absolute;
     top: 38.5%;
     width: 45%;
-    background-color: red;
     height: 40px;
   }
   .moreDetails-Favorite{
     position: absolute;
     top: 38.5%;
     width: 20%;
-    background-color: blue;
     height: 40px;
     right: 0px;
   }
 
   .moreDetails-InfoContainer{
     position: absolute;
-    background-color: yellow;
     top: 45%;
     width: 100%;
     height: 40%;
@@ -389,12 +374,40 @@
     bottom: -20%
   }
 
+  .rightMainContainer-signUp{
+    display: none;
+    position: absolute;
+    top: 0px;
+    width: 27.33%;
+    height: 100%;
+    background-color: white;
+    right: 0px;
+  }
+
+  nav .nav-wrapper form, nav .nav-wrapper form .input-field{
+    height: 100%;
+  }
+
+  .mainLogoIndex{
+    height: 200px;
+
+  }
+
+  .closeContainer{
+    float:left;
+    font-size: 20px;
+    font-weight: 900;
+  }
+  .closeRightDiv-Tag{
+    position: absolute;
+    top: 0px;
+    cursor: pointer;
+  }
 
 }
 
 
-
-@media screen and (max-width:800px) and (min-width:0px) {
+@media screen and (max-width:525px) and (min-width:0px) {
   .indexGM{
     background-color: rgb(253,253,253);
     text-align: center;
@@ -456,7 +469,7 @@
   .mainSearch {
     position: absolute;
     top: 44.38%;
-    right: 18.38%;
+    right: 13.38%;
   }
 
   .searchLogo{
@@ -522,6 +535,14 @@
     color: white;
   }
 
+  .signButtons{
+    position: initial;
+  }
+
+  .noPositionRel{
+    position: initial;
+  }
+
   .indexBackgroundGradient{
     position: absolute;
     height: 100vh;
@@ -535,6 +556,7 @@
   }
 
   .mainSearch-Button{
+    position: initial;
     padding-top: 5%;
     width: 200px;
     height: 60px;
@@ -543,23 +565,16 @@
     font-size: 22px;
   }
 
-  .signIn-Desktop{
-
-  }
-
   .signUpMain{
-    // font-size: 20px
     margin-left: 10px;
     float: left;
   }
 
   .loginMainbutton{
     float: left;
-    // margin-right: 10px;
   }
 
   .searchForm-Mobile{
-    // display: none;
     position: absolute;
     width: 100%;
     height: 100vh;
@@ -577,17 +592,6 @@
     -webkit-box-shadow: 0 10px 6px -6px #777;
      -moz-box-shadow: 0 10px 6px -6px #777;
           box-shadow: 0 10px 6px -6px #777;
-
-
-
-    // padding-top: 7px;
-    // position: fixed;
-    // background-color: whitesmoke;
-    // height: 160px;
-    // width: 50%;
-    // bottom: 0px;
-    // border-top-right-radius: 200px;
-
   }
 
 
@@ -645,10 +649,7 @@
   .bottomNav-buttons:active{
     color: rgb(229,115,115);
   }
-  .border-light{
-    // border-top: 2px solid #ccc;
 
-  }
   .tagforIcons{
     width: 25%;
     float: left;
@@ -755,21 +756,18 @@
     position: absolute;
     top: 38.5%;
     width: 45%;
-    // background-color: red;
     height: 40px;
   }
   .moreDetails-Favorite{
     position: absolute;
     top: 38.5%;
     width: 20%;
-    // background-color: blue;
     height: 40px;
     right: 0px;
   }
 
   .moreDetails-InfoContainer{
     position: absolute;
-    // background-color: yellow;
     top: 45%;
     width: 100%;
     height: 40%;
@@ -784,10 +782,41 @@
     position: relative;
     bottom: -20%
   }
+
+  .rightMainContainer-signUp{
+    display: none;
+    position: absolute;
+    top: 0px;
+    width: 27.33%;
+    height: 100%;
+    background-color: white;
+    right: 0px;
+  }
+
+  nav .nav-wrapper form, nav .nav-wrapper form .input-field{
+    height: 100%;
+  }
+
+  .mainLogoIndex{
+    height: 200px;
+
+  }
+
+  .closeContainer{
+    float:left;
+    font-size: 20px;
+    font-weight: 900;
+  }
+  .closeRightDiv-Tag{
+    position: absolute;
+    top: 0px;
+    cursor: pointer;
+  }
+
 }
 
 
- @media screen and (max-width:1800px) and (min-width:401px) {
+ @media screen and (max-width:1800px) and (min-width:800px) {
 
    .mainLogo-Desktop{
      color: white;
@@ -808,29 +837,29 @@
      z-index: 10;
    }
 
-  .indexBackgroundGradient{
-    position: absolute;
-    height: 100vh;
-    width: 100%;
-    background: -moz-linear-gradient(179deg, rgba(153,218,255,1) 7%, rgba(146,217,252,1) 11%, rgba(106,211,236,1) 35%, rgba(0,196,196,1) 100%); /* ff3.6+ */
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(0,196,196,1)), color-stop(65%, rgba(106,211,236,1)), color-stop(89%, rgba(146,217,252,1)), color-stop(93%, rgba(153,218,255,1))); /* safari4+,chrome */
-    background: -webkit-linear-gradient(179deg, rgba(153,218,255,1) 7%, rgba(146,217,252,1) 11%, rgba(106,211,236,1) 35%, rgba(0,196,196,1) 100%); /* safari5.1+,chrome10+ */
-    background: -o-linear-gradient(179deg, rgba(153,218,255,1) 7%, rgba(146,217,252,1) 11%, rgba(106,211,236,1) 35%, rgba(0,196,196,1) 100%); /* opera 11.10+ */
-    background: -ms-linear-gradient(179deg, rgba(153,218,255,1) 7%, rgba(146,217,252,1) 11%, rgba(106,211,236,1) 35%, rgba(0,196,196,1) 100%); /* ie10+ */
-    background: linear-gradient(271deg, rgba(153,218,255,1) 7%, rgba(146,217,252,1) 11%, rgba(106,211,236,1) 35%, rgba(0,196,196,1) 100%); /* w3c */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00C4C4', endColorstr='#99DAFF',GradientType=1 ); /* ie6-9 */
-    background-position: inherit;
-    opacity: .8;
-    text-align: center;
-    font-family: 'Montserrat', "sans-serif";
-  }
+  // .indexBackgroundGradient{
+  //   position: absolute;
+  //   height: 100vh;
+  //   width: 100%;
+  //   background: -moz-linear-gradient(179deg, rgba(153,218,255,1) 7%, rgba(146,217,252,1) 11%, rgba(106,211,236,1) 35%, rgba(0,196,196,1) 100%); /* ff3.6+ */
+  //   background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(0,196,196,1)), color-stop(65%, rgba(106,211,236,1)), color-stop(89%, rgba(146,217,252,1)), color-stop(93%, rgba(153,218,255,1))); /* safari4+,chrome */
+  //   background: -webkit-linear-gradient(179deg, rgba(153,218,255,1) 7%, rgba(146,217,252,1) 11%, rgba(106,211,236,1) 35%, rgba(0,196,196,1) 100%); /* safari5.1+,chrome10+ */
+  //   background: -o-linear-gradient(179deg, rgba(153,218,255,1) 7%, rgba(146,217,252,1) 11%, rgba(106,211,236,1) 35%, rgba(0,196,196,1) 100%); /* opera 11.10+ */
+  //   background: -ms-linear-gradient(179deg, rgba(153,218,255,1) 7%, rgba(146,217,252,1) 11%, rgba(106,211,236,1) 35%, rgba(0,196,196,1) 100%); /* ie10+ */
+  //   background: linear-gradient(271deg, rgba(153,218,255,1) 7%, rgba(146,217,252,1) 11%, rgba(106,211,236,1) 35%, rgba(0,196,196,1) 100%); /* w3c */
+  //   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00C4C4', endColorstr='#99DAFF',GradientType=1 ); /* ie6-9 */
+  //   background-position: inherit;
+  //   opacity: .8;
+  //   text-align: center;
+  //   font-family: 'Montserrat', "sans-serif";
+  // }
 
    .mainSearch {
      position: absolute;
      width: 33.3%;
      height: 20.8%;
-     right: 35.38%;
-     bottom: 35%;
+     right: 33.38%;
+     bottom: 32%;
    }
 
    input.input-searchMain{
@@ -890,10 +919,13 @@
 
    .orTag{
      color: white;
+     width: 138%;
    }
+
    .signUp-Desktop{
 
    }
+
    .mainSearch-Button{
      padding-top: 2%;
      width: 200px;
@@ -902,19 +934,66 @@
      z-index: 10;
      font-size: 22px;
    }
+
    .rightMainContainer{
-    //  display: none;
+     display: none;
+     position: absolute;
+     top: 0px;
+     width: 27.33%;
+     height: 100%;
+     background-color: white;
+     right: 0px;
+   }
+
+   .rightMainContainer-signUp{
+     display: none;
+     position: absolute;
+     top: 0px;
+     width: 27.33%;
+     height: 100%;
+     background-color: white;
+     right: 0px;
    }
   //  this is the beginning of the search form for mobile
    .searchForm-Mobile{
      display: none;
    }
 
-   .rightMainContainer{
-     display: none;
-   }
-
    .moreDetails-page{
      display: none;
    }
+
+   .buttonsTo{
+     position: absolute;
+     left: -22px;
+   }
+
+   .wrapperNav-MainPage{
+     float: right;
+     background-color: #E57373
+   }
+
+   nav .nav-wrapper form, nav .nav-wrapper form .input-field{
+     height: 100%;
+   }
+
+   .mainLogoIndex{
+     height: 200px;
+
+   }
+
+   .closeContainer{
+     float:left;
+     font-size: 20px;
+     font-weight: 900;
+   }
+   .closeRightDiv-Tag{
+     position: absolute;
+     top: 0px;
+     cursor: pointer;
+     z-index: 1000;
+   }
+
+
+
 }

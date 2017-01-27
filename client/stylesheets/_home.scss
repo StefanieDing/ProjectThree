@@ -1,20 +1,15 @@
 .row .col.s8 {
     width: 66.66667%;
     margin-left: auto;
-    /* left: auto; */
-    /* right: auto; */
-    
     padding-left:300px;
 }
 
-    @media #{$medium-and-down} {
-    // styles for medium screens and down
-  body{
-    padding-left:0px
-  }
-  }
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0098ab5facf9d992fc3f2bc9f88b6273a492b3ad
 /****** Result Button Animation ******/
 
 
@@ -31,16 +26,16 @@
   height: 60px;
   width: 200px;
   cursor: pointer;
-  
+
   &:hover {
     background-color: #DDF7FF;
-    
+
     .submitSVG {
       transform: rotate(10deg);
       transition: transform .15s;
     }
   }
-  
+
   .submitSVG {
     position: absolute;
     top: 13px;
@@ -48,12 +43,12 @@
     height: 30px;
     width: auto;
     transition: transform .15s;
-    
+
     path {
       fill: #2D7586;
     }
   }
-  
+
   &.clicked {
     background-color: #cff5b3;
     border: 2px solid #cff5b3;
@@ -66,7 +61,7 @@
       animation: flyaway 1.3s linear;
       top: -80px;
       right: -1000px;
-      
+
       path {
         fill: #6AAA3B;
       }
@@ -86,7 +81,7 @@
   20%   { transform: rotate(-20deg);
           top: 13px;
           right: -130px;
-          height: 45px; }  
+          height: 45px; }
   40%   { transform: rotate(10deg);
           top: -40px;
           right: -280px;
@@ -104,4 +99,12 @@
   50% { padding-left: 30px; }
   100% { padding-left: 6px; }
 }
+<<<<<<< HEAD
 
+=======
+ 
+.locationBox {
+  height: 250px;
+  overflow-y: scroll;
+}
+>>>>>>> 0098ab5facf9d992fc3f2bc9f88b6273a492b3ad

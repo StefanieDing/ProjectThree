@@ -3,7 +3,7 @@
   <div class="indexBackgroundGradient"></div>
   <div class="indexGM">
     <!--  this is the beginning of the search for mobile-->
-    <div class="searchForm-Mobile">
+    <!-- <div class="searchForm-Mobile">
       <div class="resultsMainContainer-Mobile">
           <div class="resultSearchContainer">
             <div class="resultsPhoto-Container">
@@ -55,10 +55,10 @@
         <a class="atagsforbottommobile"><i class="small material-icons bottomNav-buttons border-light">chat_bubble_outline</i><p class="tagforIcons2 colorText-Main"> messages</p></a>
         <a class="atagsforbottommobile"><i class="small material-icons bottomNav-buttons border-light">person_pin</i><p class="tagforIcons3 colorText-Main"> profile</p></a>
       </div>
-    </div>
+    </div> -->
     <!--  this is where the search form for mobile ends-->
     <!--  this is the page for mobile when you click on more details-->
-    <div class="moreDetails-page">
+    <!-- <div class="moreDetails-page">
       <div class="moreDetails-Container">
           <div class="moreDetails-Header">
             <h1 class="logo-Mobile">
@@ -94,14 +94,39 @@
           Get Directions?
         </div>
       </div>
-    </div>
+    </div> -->
     <!--  end of more details page-->
     <div class="mainLogoIndex">
-      <h1 class="mainLogo-Desktop"> Open Close </h1>
+     <!--  <h1 class="mainLogo-Desktop"> Open Close </h1> -->
+     <img src="img/logo-white.png" alt="Open Close" width="500" class="mainLogo-Desktop">
     </div>
+
+
       <div class="rightMainContainer slideLeft">
         <div class="logoMainContainer">
-            <h1 class="logoMain">Open Close </h1>
+          <div class="closeContainer"> <p class="closeRightDiv-Tag">X</p> </div>
+            <!-- <h1 class="logoMain">Open Close </h1> -->
+            <img src="img/logo-black.png" alt="Open Close" width="150" class="logoMain">
+        </div>
+        <div class="loginform-Main">
+          <div class="login">
+            <h4 >Login</h4>
+            <form method="post" id="login-form">
+              <i class="small material-icons iCGM">perm_identity</i><input type="text"  id="login-username" class="usernameMain" name="u" placeholder="Username" required="required" />
+              <i class="small material-icons iCGM">lock_outline</i><input type="password" id="login-password" class="passwordMain" name="p" placeholder="Password" required="required" />
+              <div class="buttonsTo">
+              <button type="submit" class="waves-effect waves-light btn red lighten-2 loginMainbutton  noPositionRel">Log In</button>
+              <a href="/sign-up" type="submit" class="waves-effect waves-light btn red lighten-2 signUpMain  noPositionRel">Sign Up</a>
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+<!--
+      <div class="rightMainContainer-signUp slideLeft">
+        <div class="logoMainContainer">
+            <img src="img/logo-black.png" alt="Open Close" width="150" class="logoMain">
         </div>
         <div class="loginform-Main">
           <div class="login">
@@ -110,13 +135,19 @@
               <i class="small material-icons iCGM">perm_identity</i><input type="text"  class="usernameMain" name="u" placeholder="Username" required="required" />
               <i class="small material-icons iCGM">lock_outline</i><input type="password" class="passwordMain" name="p" placeholder="Password" required="required" />
               <div class="buttonsTo">
-              <button type="submit" class="waves-effect waves-light btn red lighten-2 loginMainbutton">Log In</button>
-              <button type="submit" class="waves-effect waves-light btn red lighten-2 signUpMain">Sign Up</button>
+              <button type="submit" class="waves-effect waves-light btn red lighten-2 loginMainbutton button-collapse noPositionRel">Log In</button>
+              <button type="submit" class="waves-effect waves-light btn red lighten-2 signUpMain noPositionRel">Sign Up</button>
             </div>
             </form>
           </div>
         </div>
-      </div>
+      </div> -->
+
+
+
+
+
+
     <div class="row noMargin-Bottom">
       <div class="col s1 height-onethird border-onbottom"></div>
     </div>
@@ -124,15 +155,22 @@
       <div class="pinMainContainer hatch wobble">
       </div>
       <div class="mainSearch">
-        <a class="waves-effect waves-light btn mainSearch-Button red lighten-2"><i class="material-icons right">search</i>Search</a>
+        <nav class="wrapperNav-MainPage scale-transition scale-out">
+          <div class="nav-wrapper">
+            <form>
+              <div class="input-field">
+                <input id="search" class="searchField-Main" placeholder="Search..." type="search" required>
+                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                <i class="material-icons">close</i>
+              </div>
+            </form>
+          </div>
+        </nav>
+        <!-- <div class="waves-effect waves-light btn mainSearch-Button red lighten-2">
+          <i class="material-icons right">search</i>Search</div> -->
         <p class="orTag"> or </p>
         <a class="waves-effect waves-light btn red lighten-2 signButtons signIn-Desktop">Log In</a>
-        <a class="waves-effect waves-light btn red lighten-2 signButtons signUp-Desktop">SignUp</a>
-        <!-- <button class="mainSearch-Button">search</button> -->
-        <!-- <h3 class="searchLogo"> Search near me </h3>
-        <form>
-          <i class="small material-icons iCGM">search</i><input type="text" class="input-searchMain" name="search" placeholder="Search..">
-        </form> -->
+        <a href="/sign-up" class="waves-effect waves-light btn red lighten-2 signButtons signUp-Desktop">SignUp</a>
       </div>
       <div class="col s1 height-onethird border-onbottom"></div>
       </div>
@@ -144,19 +182,6 @@
           <a class="socialMenuLinks" href="#">Linkedin</a>
         </div>
       </div>
-      <!-- <div class="bottomMainNav-mobileOnly">
-        <div class="leftNavOption-mobileOnly">
-          signUp
-        </div>
-        <div class="middleNavOption-mobileOnly">
-          NearMe.
-        </div>
-        <div class="rightNavOption-mobileOnly">
-          signIn
-        </div>
-      </div>
-      <div class="col s1 height-onethird border-onbottom"></div> -->
-
     </div>
   </div>
 

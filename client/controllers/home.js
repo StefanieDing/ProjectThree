@@ -43,7 +43,15 @@ Template.home.helpers({
     } else{
       return true;
     }
-  }
+  },
+  thereIsEmail() {
+   if((Session.get("chatWindow")) === true){
+    console.log("true");
+    return true;
+   } else{
+    return false;
+   }
+ }
 });
 
 //set as global helper to use in home and locations template
@@ -71,4 +79,20 @@ function findzipcode(zipcode){
   Session.set('lat', lats);
   Session.set('long', longs);
   })
+<<<<<<< HEAD
 };
+=======
+};
+
+
+Template.chat.helpers({
+  thereIsEmail() {
+   if((Session.get("chatWindow")) === true){
+    console.log("true");
+    return true;
+   } else{
+    return false;
+   }
+ }
+});
+>>>>>>> 0098ab5facf9d992fc3f2bc9f88b6273a492b3ad
