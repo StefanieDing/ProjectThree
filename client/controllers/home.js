@@ -81,14 +81,3 @@ function findzipcode(zipcode){
   })
 };
 
-
-Template.chat.helpers({
-  thereIsEmail() {
-   if((Session.get("chatWindow")) === true){
-    console.log("true");
-    return true;
-   } else{
-    return false;
-   }
- }
-});
