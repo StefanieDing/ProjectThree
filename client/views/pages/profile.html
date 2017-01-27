@@ -1,5 +1,6 @@
 <template name="profile">
   <!--  main nav bar for profile page-->
+  <div class="mainPortfolio">
   <nav>
     <div class="nav-wrapper red lighten-2">
       <button href="#!" class="button-collapse profilebutton" data-activates="slide-out"><i class="material-icons">account_circle</i></button>
@@ -12,7 +13,6 @@
     </div>
   </nav>
   <!-- Main div of porfolio holds the side bar -->
-    <div class="mainPortfolio">
       <ul id="slide-out" class="side-nav">
         <li><div class="userView">
           <div class="background-profile">
@@ -24,9 +24,28 @@
           <a href="#!name"><span class="white-text name">John Doe</span></a>
           <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
         </div></li>
-        <li><a href="#"><i class="material-icons">chat_bubble_outline</i>chat</a></li>
+        <li><a href="#" style="color:white;"><i class="material-icons" style="color:white;">chat_bubble_outline</i>chat</a></li>
       </ul>
-  </div>
+</div>
+
+<div class="mobile-container-global">
+      <div class="headerContainer-Mobile">
+        <div class="mobileLogo-Container">
+          <h1 class="logo-Mobile">
+            Open-Close
+          </h1>
+        </div>
+        <form method="get" action="/search" id="search">
+          <input name="q" type="text" size="40" placeholder="Search..." class="searchbar-Mobile">
+        </form>
+      </div>
+      <div class="bottomNav-LoginMobile">
+        <a class="atagsforbottommobile"><i class="small material-icons bottomNav-buttons border-light">search</i><p class="tagforIcons colorText-Main"> search</p></a>
+        <a class="atagsforbottommobile"><i class="small material-icons bottomNav-buttons border-light">star</i><p class="tagforIcons1 colorText-Main">favorite</p></a>
+        <a class="atagsforbottommobile"><i class="small material-icons bottomNav-buttons border-light">chat_bubble_outline</i><p class="tagforIcons2 colorText-Main"> messages</p></a>
+        <a class="atagsforbottommobile"><i class="small material-icons bottomNav-buttons border-light">person_pin</i><p class="tagforIcons3 colorText-Main"> profile</p></a>
+      </div>
+</div>
 <!--  container for favorites-->
   <div class="container">
       <!-- Chat Column -->
