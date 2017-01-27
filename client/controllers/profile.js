@@ -17,10 +17,11 @@ Template.profile.onRendered(function(){
   // }, 1000)
 });
 
-var myLocations = Locations.find({});
 
 Template.profile.helpers({
   thereAreSavedLocations() {
+  var myLocations = Locations.find().fetch();
+  console.log(myLocations);
     if(myLocations.length === 0){
       return false;
     } else{
@@ -30,9 +31,11 @@ Template.profile.helpers({
 });
 
 Template.registerHelper( 'savedLoc', () => {
+  var myLocations = Locations.find().fetch();
+  console.log(myLocations);
     if(myLocations.length === 0){
       return "There are no saved locations.";
     } else{
-      return myLocations;
+      return Locations.find({});
     }
 });

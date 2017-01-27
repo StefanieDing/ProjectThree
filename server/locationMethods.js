@@ -24,7 +24,6 @@ Meteor.methods({
       url: details.url,
       hours: details.opening_hours.weekday_text
     });
-    //Locations.insert({ details: details });
     console.log('Added new location.');
   }
 });
