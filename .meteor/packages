@@ -33,3 +33,5 @@ cunneen:accounts-admin-materializecss
 session
 http
 percolate:momentum
+insecure
+autopublish
