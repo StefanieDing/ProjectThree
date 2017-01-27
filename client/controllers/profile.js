@@ -1,3 +1,5 @@
+Meteor.subscribe('locations');
+
 Template.profile.onRendered(function(){
   $('.button-collapse').sideNav({
     menuWidth: 300, // Default is 240
@@ -17,10 +19,9 @@ Template.profile.onRendered(function(){
   // }, 1000)
 });
 
-var myLocations = Locations.find().fetch();
-
 Template.profile.helpers({
   thereAreSavedLocations() {
+    var myLocations = Locations.find().fetch();
     if(myLocations.length != 0){
       return true;
     } else{
@@ -30,6 +31,7 @@ Template.profile.helpers({
 });
 
 Template.registerHelper( 'savedLoc', () => {
+  var myLocations = Locations.find().fetch();
   if(myLocations.length === 0){
     return "There are no saved locations.";
   } else{
