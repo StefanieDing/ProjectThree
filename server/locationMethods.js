@@ -27,3 +27,4 @@ Meteor.methods({
     console.log('Added new location.');
   }
 });
+

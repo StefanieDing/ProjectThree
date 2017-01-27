@@ -17,25 +17,22 @@ Template.profile.onRendered(function(){
   // }, 1000)
 });
 
+var myLocations = Locations.find().fetch();
 
 Template.profile.helpers({
   thereAreSavedLocations() {
-  var myLocations = Locations.find().fetch();
-  console.log(myLocations);
-    if(myLocations.length === 0){
-      return false;
-    } else{
+    if(myLocations.length != 0){
       return true;
+    } else{
+      return false;
     }
   },
 });
 
 Template.registerHelper( 'savedLoc', () => {
-  var myLocations = Locations.find().fetch();
-  console.log(myLocations);
-    if(myLocations.length === 0){
-      return "There are no saved locations.";
-    } else{
-      return Locations.find({});
-    }
+  if(myLocations.length === 0){
+    return "There are no saved locations.";
+  } else{
+    return Locations.find({});
+  }
 });
