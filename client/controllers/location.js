@@ -42,13 +42,33 @@ Template.locations.events({
   'click .favLocation'(event){
     event.stopPropagation();
     event.preventDefault();
+
+    //fills heart when clicked
     $(event.target).next("i").removeClass("hide");
     $(event.target).remove();
+
+    //sweetAlert
     swal({
-      title: "Favorited!",
-      allowOutsideClick: true,
-      confirmButtonColor: "#d32f2f"
+      title: "Favorite?",
+      text: "Are you sure you want to save this location?",
+      showCancelButton: true,
+      confirmButtonColor: "#d32f2f",
+      confirmButtonText: "Favorite!",
+      closeOnConfirm: false,
+      imageUrl: "img/heart-icon.png",
+      allowOutsideClick: true
+    },
+    function(){
+      //swal("Favorited!", "This location was saved to your favorites.", "success");
+      swal({
+        title: "Favorited!",
+        text: "This location was saved to your favorites.",
+        type: "success",
+        confirmButtonColor: "#d32f2f",
+        allowOutsideClick: true
+      });
     });
+
     placeid= event.target.id;
     console.log(placeid);
   }
