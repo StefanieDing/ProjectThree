@@ -14,5 +14,10 @@ Meteor.methods({
     var results = HTTP.get(detailsURL, {});
     console.log(results);
     return results;
+  },
+  saveLocation: function(placeid){
+    Locations.save({
+      place_id: placeid
+    });
   }
 });

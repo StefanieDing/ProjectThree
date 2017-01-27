@@ -43,11 +43,10 @@ Template.locations.events({
     event.stopPropagation();
     event.preventDefault();
 
-    //fills heart when clicked
-    $(event.target).next("i").removeClass("hide");
-    $(event.target).remove();
+    placeid= event.target.id;
+    console.log("PlaceID", placeid);
 
-    //sweetAlert
+    //confirm favorite
     swal({
       title: "Favorite?",
       text: "Are you sure you want to save this location?",
@@ -59,7 +58,6 @@ Template.locations.events({
       allowOutsideClick: true
     },
     function(){
-      //swal("Favorited!", "This location was saved to your favorites.", "success");
       swal({
         title: "Favorited!",
         text: "This location was saved to your favorites.",
@@ -67,10 +65,13 @@ Template.locations.events({
         confirmButtonColor: "#d32f2f",
         allowOutsideClick: true
       });
+
+    //fills heart when clicked
+    $(event.target).next("i").removeClass("hide");
+    $(event.target).remove();
     });
 
-    placeid= event.target.id;
-    console.log(placeid);
+    Meteor.call('saveLocation', placeid);
   }
 });
 
