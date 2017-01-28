@@ -33,5 +33,22 @@
 }
 
 .users{
-  font-family: 'Exo 2', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: #cd3331;
 }
+
+.side-nav.fixed a {
+    color: #f5f5f5;
+}
+
+.side-nav.fixed {
+    background-color: #212121;
+}
+
+.menuButtons{
+  font-size:larger;
+}
+
+nav ul a {
+        font-size: larger;
+      }
