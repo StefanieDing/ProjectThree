@@ -1,7 +1,7 @@
 <template name="locations">
   {{#each foundLocations }}
     <ul>
-      <a class="waves-effect waves-light btn locationDetail" id={{ place_id }}>{{ name }}
+      <a class="waves-effect waves-light btn locationDetail signButtons" id={{ place_id }}>{{ name }}
       {{#if currentUser}}
         <!-- <span>♡</span> -->
         <i class="favLocation material-icons" id={{ place_id }}>favorite_border</i>
