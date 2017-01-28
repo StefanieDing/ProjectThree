@@ -1,7 +1,10 @@
 var autoScrollingIsActive = false;
 // reactive var
 thereAreUnreadMessages = new ReactiveVar(false);
+
 var recipientID;
+var recipientsA;
+var recipientsB;
 
 scrollToBottom = function (duration) {
   var messageWindow = $(".message-window");
@@ -23,27 +26,28 @@ Meteor.subscribe("messages", {
   // helpers
   Template.chat.helpers({
     recentMessages: function () {
-      return Messages.find({}, {sort: {createdAt: 1}});
+      // senderID = Meteor.userId();
+      recipients = {recipientsA : [recipientID, Meteor.userId()], 
+      recipientsB : [Meteor.userId(), recipientID]};
+
+      return Messages.find({recipients: recipients}, {sort: {createdAt: 1}});
+      Meteor.call("renderMessages", recipients, function(err, res){
+        if (err) {
+          console.log(err)
+        }else {
+          return res
+          console.log(res);}
+      });
     },
     /* unread message helper */
     thereAreUnreadMessages: function () {
       return thereAreUnreadMessages.get();
-    }, 
-    // returning chat recipients
-    Recipient1: function(){
-      return this.username;
-    },
-    Recipient2: function(){
-      return this.sent_To;
     }
 
     // if (Recipient1 == Meteor.user().emails[0].address && Recipient2 == recipientEmail) {
 
     // }
   })
-
-  Template.chat.helpers
-
 
   /*chat window scrolling*/
   Template.message.onRendered(function () {

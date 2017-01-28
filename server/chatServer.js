@@ -13,7 +13,14 @@ Meteor.methods({
       messageText: message,
       createdAt: new Date(),
       username: Meteor.user().emails[0].address,  // grabs user email address
-      sent_To: recipientID  //stores the recipient in the message from client side
+      recipients: {recipientsA:[recipientID, Meteor.userId()], recipientsB: [Meteor.userId(), recipientID]}
+      // sent_To: recipientID,  //stores the recipient in the message from client side
+      // senderID: Meteor.userId()
     });
-  }
-});
+  },
+  renderMessages: function(recipients){
+   result = Messages.find({recipients: recipients}, {sort: {createdAt: 1}});
+   return result;
+   console.log(result);
+}});
+
