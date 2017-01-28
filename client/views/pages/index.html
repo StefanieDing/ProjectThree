@@ -2,124 +2,20 @@
   <div class="indexBackgroundPhoto"></div>
   <div class="indexBackgroundGradient"></div>
   <div class="indexGM">
-    <!--  this is the beginning of the search for mobile-->
-    <!-- <div class="searchForm-Mobile">
-      <div class="resultsMainContainer-Mobile">
-          <div class="resultSearchContainer">
-            <div class="resultsPhoto-Container">
+  <!--  div the shows up from bottom-->
+    <div class="locationBox row card-panel resultsContainer-desktopMain donotShow">
+        <!-- <h5>Found Locations</h5> -->
+          {{#if thereAreLocations}}
+            {{> locations}}
+          {{else}}
+            {{ foundLocations }}
+          {{/if}}
 
-            </div>
-            <div class="resultsTitle-Container">
-              <p>place 1 </p>
-            </div>
-            <div class="resultsMoreInfo-Container-right">
-              <p>check it out! </p>
-            </div>
-          </div>
-          <div class="resultSearchContainer">
-            <div class="resultsPhoto-Container">
-            </div>
-            <div class="resultsTitle-Container">
-              <p>palce two long titles </p>
-            </div>
-            <div class="resultsMoreInfo-Container-right">
-              <p>check it out! </p>
-            </div>
-          </div>
-          <div class="resultSearchContainer">
-            <div class="resultsPhoto-Container">
-            </div>
-            <div class="resultsTitle-Container">
-              <p>palce two long titles </p>
-            </div>
-            <div class="resultsMoreInfo-Container-right">
-              <p>check it out! </p>
-            </div>
-          </div>
-      </div>
-
-
-      <div class="headerContainer-Mobile">
-        <div class="mobileLogo-Container">
-          <h1 class="logo-Mobile">
-            Open-Close
-          </h1>
-        </div>
-        <form method="get" action="/search" id="search">
-          <input name="q" type="text" size="40" placeholder="Search..." class="searchbar-Mobile">
-        </form>
-      </div>
-      <div class="bottomNav-LoginMobile">
-        <a class="atagsforbottommobile"><i class="small material-icons bottomNav-buttons border-light">search</i><p class="tagforIcons colorText-Main"> search</p></a>
-        <a class="atagsforbottommobile"><i class="small material-icons bottomNav-buttons border-light">star</i><p class="tagforIcons1 colorText-Main">favorite</p></a>
-        <a class="atagsforbottommobile"><i class="small material-icons bottomNav-buttons border-light">chat_bubble_outline</i><p class="tagforIcons2 colorText-Main"> messages</p></a>
-        <a class="atagsforbottommobile"><i class="small material-icons bottomNav-buttons border-light">person_pin</i><p class="tagforIcons3 colorText-Main"> profile</p></a>
-      </div>
-    </div> -->
-    <!--  this is where the search form for mobile ends-->
-    <!--  this is the page for mobile when you click on more details-->
-    <!-- <div class="moreDetails-page">
-      <div class="moreDetails-Container">
-          <div class="moreDetails-Header">
-            <h1 class="logo-Mobile">
-              Open-Close
-            </h1>
-            <a href="#" class="backButton"><i class="material-icons backButtonIcon">keyboard_arrow_left</i>back</a>
-          </div>
-          <div class="moreDetails-PhotoContainer">
-
-          </div>
-          <div class="moreDetails-Rating">
-            <i class="material-icons colorIcon2">star_rate</i>
-            <i class="material-icons colorIcon2">star_rate</i>
-            <i class="material-icons colorIcon2">star_rate</i>
-            <i class="material-icons colorIcon2">star_rate</i>
-            <i class="material-icons colorIcon2">star_rate</i>
-          </div>
-          <div class="moreDetails-Favorite">
-              <i class="material-icons">favorite_border</i>
-          </div>
-      </div>
-      <div class="moreDetails-InfoContainer">
-        <div class="moreDetails-Title">
-          The Name of Location
-        </div>
-        <div class="moreDetails-Time">
-          9:00am-10:00pm
-        </div>
-        <div class="moreDetails-OpenClose">
-          Open Now!
-        </div>
-        <div class="moreDetails-GetDirection">
-          Get Directions?
-        </div>
-      </div>
-    </div> -->
-    <!--  end of more details page-->
+    </div>
+  <!-- end of search results div -->
     <div class="mainLogoIndex">
      <img src="img/logo-white.png" alt="Open Close" width="500" class="mainLogo-Desktop">
     </div>
-
-<!--  login form on desktop is hiding on as a right side div-->
-      <div class="rightMainContainer slideLeft">
-        <div class="logoMainContainer">
-          <div class="closeContainer"> <p class="closeRightDiv-Tag">X</p> </div>
-            <img src="img/logo-black.png" alt="Open Close" width="150" class="logoMain">
-        </div>
-        <div class="loginform-Main">
-          <div class="login">
-            <h4 >Login</h4>
-            <form method="post" id="login-form">
-              <i class="small material-icons iCGM">perm_identity</i><input type="text"  id="login-username" class="usernameMain" name="u" placeholder="Username" required="required" />
-              <i class="small material-icons iCGM">lock_outline</i><input type="password" id="login-password" class="passwordMain" name="p" placeholder="Password" required="required" />
-              <div class="buttonsTo">
-              <button type="submit" class="waves-effect waves-light btn red lighten-2 loginMainbutton  noPositionRel">Log In</button>
-              <a href="/sign-up" type="submit" class="waves-effect waves-light btn red lighten-2 signUpMain  noPositionRel">Sign Up</a>
-            </div>
-            </form>
-          </div>
-        </div>
-      </div>
 <!-- desktop version-->
     <div class="row noMargin-Bottom">
       <div class="col s1 height-onethird border-onbottom"></div>
@@ -128,23 +24,51 @@
       <div class="pinMainContainer hatch wobble">
       </div>
       <div class="mainSearch">
-        <nav class="wrapperNav-MainPage scale-transition scale-out">
+        <!-- <nav class="wrapperNav-MainPage scale-transition scale-out"> -->
+          <div class="formSearch">
+            <nav>
+              <div class="nav-wrapper searchForm-navwrapper">
+                  <form>
+                    <div class="input-field search-Holder">
+                      <input id="keyword" type="text" class="validate searchInputField-Main" placeholder="Search...">
+                      <label class="label-icon" for="search"><i class="material-icons iconPos" style="color:black;">search</i></label>
+                    </div>
+                    <div class="zipcode-Holder">
+                      <input id="zipcode" type="text" class="validate" placeholder="ZipCode">
+                    </div>
+                    <div class="radius-Holder">
+                      <select id="radius" class="waves-effect waves-light browser-default">
+                        <label>Radius(Miles)</label>
+                        <option value="" disabled selected>Nearby?</option>
+                        <option value="8000">5 Miles</option>
+                        <option value="16000">10 Miles</option>
+                        <option value="33000">20 Miles</option>
+                        <option value="50000">30 Miles</option>
+                      </select>
+                    </div>
+                    <input type="submit" class="submitButton-searchForm" value="submit">
+                </form>
+              </div>
+           </nav>
+          </div>
+
+
+
+
+<!--
           <div class="nav-wrapper">
             <form class="mainSearchForm-mainPage">
-
-
-
               <div class="input-field">
-                <input id="search" class="searchField-Main validate" placeholder="Search..." type="search" required>
+                <input id="keyword" class="searchField-Main validate" placeholder="Search..." type="search" required>
                 <label class="label-icon" for="search"><i class="material-icons">search</i></label>
                 <i class="material-icons">close</i>
               </div>
             </form>
-          </div>
-        </nav>
-        <p class="orTag"> or </p>
-        <a href="/sign-in" class="waves-effect waves-light btn red lighten-2 signButtons signIn-Desktop">Log In</a>
-        <a href="/sign-up" class="waves-effect waves-light btn red lighten-2 signButtons signUp-Desktop">SignUp</a>
+          </div> -->
+        <!-- </nav> -->
+        <!-- <p class="orTag"> or </p>
+        <a href="/sign-in" class="waves-effect waves-light btn red lighten-2 signButtons signIn-Desktop ">Log In</a>
+        <a href="/sign-up" class="waves-effect waves-light btn red lighten-2 signButtons signUp-Desktop ">SignUp</a> -->
       </div>
       <div class="col s1 height-onethird border-onbottom"></div>
       </div>
@@ -154,6 +78,10 @@
           <a class="socialMenuLinks" href="#"> instagram</a>
           <a class="socialMenuLinks" href="#">Github</a>
           <a class="socialMenuLinks" href="#">Linkedin</a>
+          <div class="userCreation">
+            <a href="/sign-in" class="waves-effect waves-light btn red lighten-2 signButtons signIn-Desktop noPositionRelative marginRight-Button">Log In</a>
+            <a href="/sign-up" class="waves-effect waves-light btn red lighten-2 signButtons signUp-Desktop noPositionRelative">SignUp</a>
+          </div>
         </div>
       </div>
     </div>
@@ -163,80 +91,12 @@
 
 
 <div class="container">
-  <div class="row">
-    <div class="form col s12">
-      <h4><center>What's open close by?</center></h4>
-      <div class="row">
-        <form class="col s8">
-          <div class="row">
-            <div class="input-field col s6">
-              <input placeholder="" id="keyword" type="text" class="validate">
-              <label for="keyword">Keyword</label>
-            </div>
-            <div class="input-field col s6">
-              <input id="zipcode" type="text" class="validate">
-              <label for="zipcode">Zip Code</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s6">
-              <label>Radius(Miles)</label><br><br>
-                <select id="radius" class="browser-default">
-                  <option value="" disabled selected>Choose Radius</option>
-                  <option value="8000">5</option>
-                  <option value="16000">10</option>
-                  <option value="33000">20</option>
-                  <option value="50000">30</option>
-                </select>
-            </div>
-          </div>
-              <input type="submit" value="submit">
-        </form>
-      </div>
-  </div>
-  </div>
-  <div class="locationBox row card-panel">
-      <h5>Found Locations</h5>
-        {{#if thereAreLocations}}
-          {{> locations}}
-        {{else}}
-          {{ foundLocations }}
-        {{/if}}
-
-  </div>
   <div class="col s8 right">
     {{#if thereIsEmail}}
       {{> chat}}
     {{/if}}
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--  end of home page-->
 
 
 </template>

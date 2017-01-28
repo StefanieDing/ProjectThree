@@ -1,12 +1,15 @@
 Template.index.events({
 
-  'submit .form'(event) {
+  'submit .formSearch'(event) {
     // Prevent default browser form submit
     event.preventDefault();
      $('.submitCss').addClass('clicked')
        setTimeout(function(){
       $(".clicked").removeClass("clicked")
       },1500);
+    $('.mainSearch').animate({top: '0px'});
+    $('.resultsContainer-desktopMain').removeClass('donotShow').addClass('slideUp');
+    $('.mainLogoIndex').css("display", "none");
 
     var target = event.target;
     var keyword = target.keyword.value;
@@ -36,6 +39,8 @@ Template.index.events({
     target.zipcode.value = '';
   }
 });
+
+
 
 Template.index.helpers({
   thereAreLocations() {
@@ -94,6 +99,23 @@ Template.chat.helpers({
  }
 
 
+
+
+//  Template.index.onRendered(function(){
+//
+//    $('.dropdown-button').dropdown({
+//      inDuration: 300,
+//      outDuration: 225,
+//      constrainWidth: false, // Does not change width of dropdown to that of the activator
+//      hover: true, // Activate on hover
+//      gutter: 0, // Spacing from edge
+//      belowOrigin: false, // Displays dropdown below the button
+//      alignment: 'left', // Displays dropdown with edge aligned to the left of button
+//      stopPropagation: false // Stops event propagation
+//    }
+//  );
+//
+// )}
 
 
 });
