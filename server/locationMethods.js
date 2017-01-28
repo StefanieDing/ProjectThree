@@ -25,6 +25,13 @@ Meteor.methods({
       hours: details.opening_hours.weekday_text
     });
     console.log('Added new location.');
+  },
+  removeLocation: function(id){
+    Locations.remove({ _id: id });
+  },
+  viewDetails: function(id){
+    var results = Locations.find({ _id: id }).fetch();
+    return results;
   }
 });
 
