@@ -5,10 +5,12 @@ Template.saved.events({
     event.stopPropagation();
     event.preventDefault();
 
-    var placeid = event.target.id;
-    var detail = Locations.find({ place_id: placeid }).fetch()[0];
-    console.log(detail);
-    swal({
+    var id = event.target.id;
+
+    Meteor.call("viewDetails", id, function(err, res){
+    var detail = res[0];
+
+      swal({
         title: detail.name,
         // text: detail.formatted_address,
         text: "<a href=" + detail.url + ">" + detail.address + "</a>" +
@@ -27,6 +29,7 @@ Template.saved.events({
         allowOutsideClick: true,
         confirmButtonColor: "#d32f2f"
       });
+    });
   },
   'click .deleteLocation'(event){
     event.stopPropagation();
