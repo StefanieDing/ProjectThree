@@ -16,8 +16,8 @@
   overflow: visible;
   position: relative;
   padding-right: 30px;
-  background-color: #ECFBFF;
-  border: 1px solid #A6E0EE;
+  background-color: #d32f2f;
+  border: 1px solid #d32f2f;
   color: #2D7586;
   display: block;
   height: 60px;
@@ -97,13 +97,9 @@
   100% { padding-left: 6px; }
 }
  
+ 
 .locationBox {
   height: 250px;
   overflow-y: scroll;
 }
 
-.row .col.s8 {
-    width: 66.66667%;
-    margin-left: auto;
-    padding-left:300px;
-}
