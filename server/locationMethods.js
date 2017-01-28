@@ -29,5 +29,9 @@ Meteor.methods({
   removeLocation: function(id){
     Locations.remove({ _id: id });
   },
+  viewDetails: function(id){
+    var results = Locations.find({ _id: id }).fetch();
+    return results;
+  }
 });
 
