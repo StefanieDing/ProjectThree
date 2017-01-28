@@ -1,8 +1,9 @@
 <Template name="ListUsers">
-  {{#each allUsers}}
-    <li class="username">
-    <a>{{email}}</a>
+  
+    <li>
+    {{#each allUsers}}
+      <a class="username" id={{_id}}>{{email}}</a>
+    {{/each}}
     </li>
-  {{/each}}
 </Template>
 

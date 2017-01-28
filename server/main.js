@@ -23,10 +23,10 @@ Meteor.startup(() => {
   });
 
   // finds recipients for chat
-  Meteor.publish('findRecipients', function (){ 
-   return Messages.find({},{fields: {recipients: 1}});
+  // Meteor.publish('findRecipients', function (){ 
+  //  return Messages.find({},{fields: {recipients: 1}});
 
-  });
+  // });
 
   // // finds all online users
   // Meteor.publish("userStatus", function() {

@@ -1,7 +1,7 @@
 var autoScrollingIsActive = false;
 // reactive var
 thereAreUnreadMessages = new ReactiveVar(false);
-var recipientEmail;
+var recipientID;
 
 scrollToBottom = function (duration) {
   var messageWindow = $(".message-window");
@@ -18,7 +18,7 @@ Meteor.subscribe("messages", {
 });
 
 // subscribing to findRecipients publication
-Meteor.subscribe('findRecipients');
+// Meteor.subscribe('findRecipients');
 
   // helpers
   Template.chat.helpers({
@@ -31,12 +31,18 @@ Meteor.subscribe('findRecipients');
     }, 
     // returning chat recipients
     Recipient1: function(){
-      return this.recipients[0];
+      return this.username;
     },
     Recipient2: function(){
-      return this.recipients[1];
+      return this.sent_To;
     }
+
+    // if (Recipient1 == Meteor.user().emails[0].address && Recipient2 == recipientEmail) {
+
+    // }
   })
+
+  Template.chat.helpers
 
 
   /*chat window scrolling*/
@@ -52,12 +58,12 @@ Meteor.subscribe('findRecipients');
 
   // Event to grab recipient Email
   Template.ListUsers.events({
-  'click li': function(event){
-    recipientEmail = $(event.target).closest('a').html();
-    // console.log(recipientEmail);
+  'click .username': function(event){
+    recipientID = event.target.id;
+    console.log(recipientID);
 
 
-    if (recipientEmail) {
+    if (recipientID) {
       Session.set("chatWindow", true);
     } else {
       Session.set("chatWindow", false)
@@ -70,7 +76,7 @@ Meteor.subscribe('findRecipients');
     "submit .new-message": function(event) {
       var messageText = event.target.text.value;
 
-      Meteor.call("sendMessage", messageText, recipientEmail);
+      Meteor.call("sendMessage", messageText, recipientID);
 
       // console.log(recipientEmail);
 

@@ -1,4 +1,4 @@
-var recipientEmail;
+var recipientID;
 
 Template.navbar.helpers({
   // check if user is an admin
