@@ -6,8 +6,8 @@ Template.saved.events({
     event.preventDefault();
 
     var placeid = event.target.id;
-    var detail = Locations.find({ place_id: placeid }).fetch()[0];
-    console.log(detail);
+    var detail = Locations.find({ place_id: placeid }).fetch();
+    
     swal({
         title: detail.name,
         // text: detail.formatted_address,

@@ -28,6 +28,6 @@ Meteor.methods({
   },
   removeLocation: function(id){
     Locations.remove({ _id: id });
-  }
+  },
 });
 
