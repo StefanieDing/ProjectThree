@@ -33,4 +33,4 @@ cunneen:accounts-admin-materializecss
 session
 http
 percolate:momentum
-iron:middleware-stack
+iron:middleware-stack@1.1.0
