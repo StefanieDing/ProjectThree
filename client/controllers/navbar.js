@@ -7,6 +7,10 @@ Template.navbar.helpers({
   }
 });
 
+Template.registerHelper( 'userEmail', () => {
+  return Meteor.user().emails[0].address;
+});
+
 Template.navbar.onRendered(function(){
   $('.button-collapse').sideNav({
     menuWidth: 300, // Default is 240

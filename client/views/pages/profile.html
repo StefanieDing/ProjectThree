@@ -14,22 +14,22 @@
   </nav>
 
   <!-- Main div of porfolio holds the side bar -->
-      <ul id="slide-out" class="side-nav">
+      <ul id="slide-out" class="side-nav grey darken-4">
         <li><div class="userView">
-          <div class="background-profile">
+         <!--  <div class="background-profile">
             <img src="img/5.jpg">
-          </div>
+          </div> -->
           <div class="userPhoto">
-            <img class="personContainer" src="img/personHolder.jpg">
+            <img class="personContainer" src="img/user-default.png" width="100%">
           </div>
-          <a href="#!name"><span class="white-text name">John Doe</span></a>
-          <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+         <!--  <a href="#!name"><span class="white-text name">John Doe</span></a> -->
+          <a href="#"><span class="white-text email">{{ userEmail }}</span></a>
         </div></li>
-        <li><a href="#" style="color:white;"><i class="material-icons" style="color:white;">chat_bubble_outline</i>chat</a></li>
+        <li><a href="/home" style="color:white;"><i class="material-icons" style="color:white;">chat_bubble_outline</i>chat</a></li>
       </ul>
 </div>
-
-<div class="mobile-container-global">
+<div class="container center-align">
+<!-- <div class="mobile-container-global"> -->
       <div class="headerContainer-Mobile">
         <div class="mobileLogo-Container">
           <!-- <h1 class="logo-Mobile">
@@ -41,12 +41,14 @@
           <input name="q" type="text" size="40" placeholder="Search..." class="searchbar-Mobile">
         </form> -->
       </div>
-      <div class="bottomNav-LoginMobile">
-        <a class="atagsforbottommobile"><i class="small material-icons bottomNav-buttons border-light">search</i><span class="tagforIcons colorText-Main"> search</span></a><br>
+      
+      <div>
+      <!-- <div class="bottomNav-LoginMobile"> -->
+        <a class="atagsforbottommobile" href="/home"><i class="small material-icons bottomNav-buttons border-light">search</i><span class="tagforIcons colorText-Main"> search</span></a><br>
 
-        <a class="atagsforbottommobile"><i class="small material-icons bottomNav-buttons border-light">star</i><span class="tagforIcons1 colorText-Main">favorite</span></a><br>
+        <a class="atagsforbottommobile"><i class="small material-icons bottomNav-buttons border-light">favorite</i><span class="tagforIcons1 colorText-Main">favorite locations</span></a><br>
 
-        <div class="favorites">
+        <div class="card-panel favorites grey darken-4 left-align">
           {{#if thereAreSavedLocations}}
             {{> saved }}
           {{else}}
@@ -54,8 +56,8 @@
           {{/if}}
         </div>
 
-        <a class="atagsforbottommobile"><i class="small material-icons bottomNav-buttons border-light">chat_bubble_outline</i><span class="tagforIcons2 colorText-Main"> messages</span></a><br>
-        <a class="atagsforbottommobile personTag-mobile"><i class="small material-icons bottomNav-buttons border-light">person_pin</i><span class="tagforIcons3 colorText-Main"> profile</span></a>
+        <!-- <a class="atagsforbottommobile"><i class="small material-icons bottomNav-buttons border-light">chat_bubble_outline</i><span class="tagforIcons2 colorText-Main"> messages</span></a><br>
+        <a class="atagsforbottommobile personTag-mobile"><i class="small material-icons bottomNav-buttons border-light">person_pin</i><span class="tagforIcons3 colorText-Main"> profile</span></a> -->
       </div>
 </div>
 <!--  container for favorites-->

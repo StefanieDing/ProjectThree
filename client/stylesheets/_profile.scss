@@ -16,6 +16,7 @@
 .background-profile{
   overflow: hidden;
   position: absolute;
+  height: 100px;
   top: 0;
   right: 0;
   bottom: 0;
@@ -51,4 +52,9 @@
   .mobile-container-global{
       display: none;
   }
+}
+
+.favorites{
+  height: 250px;
+  overflow-y: scroll;
 }
