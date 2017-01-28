@@ -34,12 +34,14 @@
                       <label class="label-icon" for="search"><i class="material-icons iconPos" style="color:black;">search</i></label>
                     </div>
                     <div class="zipcode-Holder">
-                      <input id="zipcode" type="text" class="validate" placeholder="ZipCode">
+                      <input id="zipcode" type="text" class="validate zipcode-input" placeholder="ZipCode">
                     </div>
                     <div class="radius-Holder">
-                      <select id="radius" class="waves-effect waves-light browser-default">
-                        <label>Radius(Miles)</label>
-                        <option value="" disabled selected>Nearby?</option>
+                      <!-- <i class="material-icons nearbyIcon-locationMenu">edit_location</i> -->
+                      <select id="radius" class="waves-effect waves-light browser-default red lighten-2 select-MainsearchNav" data-show-icon="true">
+                        <option value="" disabled selected data-content="<i class='material-icons nearbyIcon-locationMenu' style='color:white;'>edit_location</i>">
+                          Nearby
+                        </option>
                         <option value="8000">5 Miles</option>
                         <option value="16000">10 Miles</option>
                         <option value="33000">20 Miles</option>

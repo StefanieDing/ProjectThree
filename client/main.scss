@@ -34,7 +34,6 @@ body{
 .search-Holder{
   width: 60%;
   height: 64px;
-  // background: red;
 }
 
 
@@ -42,17 +41,15 @@ body{
   position: absolute;
   top: 0px;
   right: 0px;
-  width: 30%;
+  width: 20%;
   height: 64px;
-  // background: yellow;
 }
 
 .radius-Holder{
   position: absolute;
   top: 0px;
-  right: 30%;
-  width: 10%;
-  // background: blue;
+  right: 20%;
+  width: 20%;
 }
 
 .submitButton-searchForm{
@@ -71,6 +68,11 @@ input.searchInputField-Main{
 
 }
 
+input.zipcode-input{
+  border-bottom: none;
+  height: 100%;
+}
+
 nav .input-field input {
     height: 100%;
     font-size: 1.2rem;
@@ -85,8 +87,15 @@ nav .input-field input {
 
 select.browser-default {
   display: block;
-  width: 30px;
   height: 64px;
+  color: black;
+  border: none;
+}
+
+.nearbyIcon-locationMenu{
+  position: absolute;
+  color: white;
+  z-index: 100;
 }
 
 .resultsContainer-desktopMain{
@@ -120,7 +129,7 @@ select.browser-default {
 
 .userCreation{
   position: absolute;
-  width: 20%;
+  width: 25%;
   right: 0%;
   top: 0px;
   padding-top: 20px;
