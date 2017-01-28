@@ -2,6 +2,9 @@ Template.navbar.helpers({
   // check if user is an admin
   'isAdminUser': function() {
     return Roles.userIsInRole(Meteor.user(), ['admin']); 
+  },
+  'email': function(){ 
+    return Meteor.user().emails[0].address;
   }
 });
 

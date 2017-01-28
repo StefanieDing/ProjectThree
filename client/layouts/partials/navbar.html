@@ -16,7 +16,7 @@
                   <li><a href="/sign-in">Sign In</a></li>
                 {{/if}}
                   <li><a href="/about">About</a></li>
-                  <li><a href ="/profile">Profile</a></li>
+                 <!--  <li><a href ="/profile">Profile</a></li> -->
               </ul>
                 {{#if currentUser}}
               <ul id="slide-out" class="side-nav fixed">
@@ -26,7 +26,8 @@
                       <a class="collapsible-header  waves-effect waves-red">Profile </a>
                       <div class="collapsible-body">
                         <ul>
-                          <li style="background-color: green"><a href="profile.html">Bob's Profile</a>
+                          <!-- <li style="background-color: green"><a href="profile.html">Bob's Profile</a> -->
+                          <li><a href="/profile">{{ email }}</a>
                           </li> 
                         </ul>
                       </div>
