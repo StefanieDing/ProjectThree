@@ -1,4 +1,4 @@
-  
+
 
     @media only screen and (max-width : 992px) {
       header, main, footer {
@@ -26,8 +26,33 @@
     // styles for medium screens and down
     .pad-body {
     padding-left: 0px;
-    } 
+    }
     nav .button-collapse {
-    left: 0px;
-}
+    left: -6%;
   }
+}
+
+.users{
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: #cd3331;
+}
+
+.side-nav.fixed a {
+    color: #f5f5f5;
+}
+
+.side-nav.fixed {
+    background-color: #212121;
+
+    background-image: url(img/city-lights.jpg);
+    background-size: cover;
+    background-position-x: -114px;
+}
+
+.menuButtons{
+  font-size:larger;
+}
+
+nav ul a {
+        font-size: larger;
+      }

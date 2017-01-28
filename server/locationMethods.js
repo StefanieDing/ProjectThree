@@ -14,5 +14,24 @@ Meteor.methods({
     var results = HTTP.get(detailsURL, {});
     console.log(results);
     return results;
+  },
+  saveLocation: function(placeId, details){
+    Locations.insert({ 
+      place_id: placeId,
+      name: details.name,
+      address: details.formatted_address,
+      phone_number: details.formatted_phone_number,
+      url: details.url,
+      hours: details.opening_hours.weekday_text
+    });
+    console.log('Added new location.');
+  },
+  removeLocation: function(id){
+    Locations.remove({ _id: id });
+  },
+  viewDetails: function(id){
+    var results = Locations.find({ _id: id }).fetch();
+    return results;
   }
 });
+

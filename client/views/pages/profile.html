@@ -1,18 +1,19 @@
 <template name="profile">
   <!--  main nav bar for profile page-->
+  <div class="mainPortfolio">
   <nav>
-    <div class="nav-wrapper red lighten-2">
+    <div class="nav-wrapper red darken-2">
       <button href="#!" class="button-collapse profilebutton" data-activates="slide-out"><i class="material-icons">account_circle</i></button>
       <ul class="right hide-on-med-and-down">
-        <li><a href="/index"><i class="material-icons">search</i></a></li>
-        <li><a href="badges.html"><i class="material-icons">view_module</i></a></li>
+        <li><a href="/home"><i class="material-icons">search</i></a></li>
+        <!-- <li><a href="badges.html"><i class="material-icons">view_module</i></a></li> -->
         <li><a href="/profile"><i class="material-icons">refresh</i></a></li>
-        <li><a href="mobile.html"><i class="material-icons">more_vert</i></a></li>
+        <!-- <li><a href="mobile.html"><i class="material-icons">more_vert</i></a></li> -->
       </ul>
     </div>
   </nav>
+
   <!-- Main div of porfolio holds the side bar -->
-    <div class="mainPortfolio">
       <ul id="slide-out" class="side-nav">
         <li><div class="userView">
           <div class="background-profile">
@@ -24,9 +25,39 @@
           <a href="#!name"><span class="white-text name">John Doe</span></a>
           <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
         </div></li>
-        <li><a href="#"><i class="material-icons">chat_bubble_outline</i>chat</a></li>
+        <li><a href="#" style="color:white;"><i class="material-icons" style="color:white;">chat_bubble_outline</i>chat</a></li>
       </ul>
-  </div>
+</div>
+
+<div class="mobile-container-global">
+      <div class="headerContainer-Mobile">
+        <div class="mobileLogo-Container">
+          <!-- <h1 class="logo-Mobile">
+            Open-Close
+          </h1> -->
+          <img src="img/logo-black.png" class="logo-Mobile" width="250">
+        </div>
+        <!-- <form method="get" action="/search" id="search">
+          <input name="q" type="text" size="40" placeholder="Search..." class="searchbar-Mobile">
+        </form> -->
+      </div>
+      <div class="bottomNav-LoginMobile">
+        <a class="atagsforbottommobile"><i class="small material-icons bottomNav-buttons border-light">search</i><span class="tagforIcons colorText-Main"> search</span></a><br>
+
+        <a class="atagsforbottommobile"><i class="small material-icons bottomNav-buttons border-light">star</i><span class="tagforIcons1 colorText-Main">favorite</span></a><br>
+
+        <div class="favorites">
+          {{#if thereAreSavedLocations}}
+            {{> saved }}
+          {{else}}
+            {{ savedLoc }}
+          {{/if}}
+        </div>
+
+        <a class="atagsforbottommobile"><i class="small material-icons bottomNav-buttons border-light">chat_bubble_outline</i><span class="tagforIcons2 colorText-Main"> messages</span></a><br>
+        <a class="atagsforbottommobile personTag-mobile"><i class="small material-icons bottomNav-buttons border-light">person_pin</i><span class="tagforIcons3 colorText-Main"> profile</span></a>
+      </div>
+</div>
 <!--  container for favorites-->
   <div class="container">
       <!-- Chat Column -->

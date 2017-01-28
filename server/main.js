@@ -11,10 +11,16 @@ Meteor.startup(() => {
     Roles.addUsersToRoles(Meteor.settings.adminId, ['admin']);
   }
 
-  // finds all users
+
+  Meteor.publish("locations", function () {
+    return Locations.find({});
+  });
+
+
   Meteor.publish("messages", function () {
     return Messages.find();
   });
+
 
   // finds all user emails
   Meteor.publish('allEmails', function (){ 

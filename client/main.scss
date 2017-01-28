@@ -8,15 +8,146 @@ $primary-color: color("grey", "darken-4");
 @import "./stylesheets/_mobile.scss";
 @import "./stylesheets/_home.scss";
 @import "./stylesheets/_about.scss";
-@import "./stylesheets/_profile.scss";
-@import "./stylesheets/_chat.scss";
 @import url('https://fonts.googleapis.com/css?family=Montserrat:700');//googlefonts import into css, Montseerat
 @import url('https://fonts.googleapis.com/css?family=Vampiro+One');
 
 
 body{
-    overflow: hidden;
+    // overflow: hidden;
+    overflow-y: scroll;
 }
+
+.noPositionRelative{
+  position: initial;
+}
+
+.formSearch{
+  width: 127%;
+  height: 64px;
+  background-color: #E57373;
+}
+
+.searchForm-navwrapper{
+  background-color: #E57373;
+}
+
+.search-Holder{
+  width: 60%;
+  height: 64px;
+  // background: red;
+}
+
+
+.zipcode-Holder{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 30%;
+  height: 64px;
+  // background: yellow;
+}
+
+.radius-Holder{
+  position: absolute;
+  top: 0px;
+  right: 30%;
+  width: 10%;
+  // background: blue;
+}
+
+.submitButton-searchForm{
+  display: none;
+}
+
+input.searchInputField-Main{
+  transition: all 0.3s;
+  font-family: 'Montserrat', "sans-serif";
+  width: 80%;
+
+}
+.input-field input[type=text]:focus {
+  background-color: white;
+  color: black;
+
+}
+
+nav .input-field input {
+    height: 100%;
+    font-size: 1.2rem;
+    border: none;
+    padding-left: 4rem;
+}
+
+.iconPos{
+  margin: 1px;
+  margin-left: 14px;
+}
+
+select.browser-default {
+  display: block;
+  width: 30px;
+  height: 64px;
+}
+
+.resultsContainer-desktopMain{
+  position: absolute;
+  height: 90%;
+  width: 80%;
+  bottom: 0px;
+  right: 0px;
+  z-index: 1000;
+}
+
+.donotShow{
+  display: none;
+}
+
+.slideUp{
+	animation-name: slideUp2;
+	-webkit-animation-name: slideUp2;
+  -webkit-transition: all .7s cubic-bezier(0.47, 0, 0.745, 0.715);
+  transition:  all .7s cubic-bezier(0.47, 0, 0.745, 0.715);
+
+	animation-duration:  .7s;
+	-webkit-animation-duration:  .7s;
+
+	animation-timing-function: ease;
+	-webkit-animation-timing-function: ease;
+
+
+	visibility: visible !important;
+}
+
+.userCreation{
+  position: absolute;
+  width: 20%;
+  right: 0%;
+  top: 0px;
+  padding-top: 20px;
+}
+
+.marginRight-Button{
+  background-color: transparent;
+  color: white;
+  margin-right: 10px;
+}
+
+.mainSearch{
+  z-index: 1000;
+}
+
+@keyframes slideUp2 {
+	0% {
+    display: none;
+    height: 0px;
+		transform: translateY(100%);
+	}
+	100% {
+    height: 90%;
+		transform: translateY(0%);
+	}
+}
+
 
 @keyframes hatch1 {
   50% {
@@ -126,20 +257,20 @@ body{
 }
 
 .hatch{
-	animation-name: hatch;
-	-webkit-animation-name: hatch;
+  animation-name: hatch;
+  -webkit-animation-name: hatch;
 
-	animation-duration: 2s;
-	-webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-duration: 2s;
 
-	animation-timing-function: ease-in-out;
-	-webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
 
-	transform-origin: 50% 100%;
-	-ms-transform-origin: 50% 100%;
-	-webkit-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  -webkit-transform-origin: 50% 100%;
 
-	visibility: visible !important;
+  visibility: visible !important;
 }
 
 .loginMainButton{
@@ -148,37 +279,37 @@ body{
 
 .slideLeft{
   overflow: hidden;
-	animation-name: slideLeft;
-	-webkit-animation-name: slideLeft;
+  animation-name: slideLeft;
+  -webkit-animation-name: slideLeft;
 
-	animation-duration: 1s;
-	-webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
 
-	animation-timing-function: ease-in-out;
-	-webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
 
-	visibility: visible !important;
+  visibility: visible !important;
 }
 
 @keyframes slideLeft {
-	0% {
-		transform: translateX(100%);
-	}
-	// 50%{
-	// 	transform: translateX(-8%);
-	// }
-	// 65%{
-	// 	transform: translateX(4%);
-	// }
-	// 80%{
-	// 	transform: translateX(-4%);
-	// }
-	// 95%{
-	// 	transform: translateX(2%);
-	// }
-	100% {
-		transform: translateX(0%);
-	}
+  0% {
+    transform: translateX(100%);
+  }
+  // 50%{
+  //  transform: translateX(-8%);
+  // }
+  // 65%{
+  //  transform: translateX(4%);
+  // }
+  // 80%{
+  //  transform: translateX(-4%);
+  // }
+  // 95%{
+  //  transform: translateX(2%);
+  // }
+  100% {
+    transform: translateX(0%);
+  }
 }
 
 
@@ -249,3 +380,5 @@ input.passwordMain{
   margin: 8px;
   color: rgb(209,209,209);
 }
+
+@import "./stylesheets/dist/sweetalert.scss";

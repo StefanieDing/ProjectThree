@@ -1,36 +1,33 @@
 0 info it worked if it ends with ok
-1 verbose cli [ 'C:\\Users\\admin\\AppData\\Local\\.meteor\\packages\\meteor-tool\\1.4.2_3\\mt-os.windows.x86_32\\dev_bundle\\bin\\node.exe',
-1 verbose cli   'C:\\Users\\admin\\AppData\\Local\\.meteor\\packages\\meteor-tool\\1.4.2_3\\mt-os.windows.x86_32\\dev_bundle\\lib\\node_modules\\npm\\bin\\npm-cli.js',
-1 verbose cli   'run',
-1 verbose cli   'dev' ]
-2 info using npm@3.10.9
-3 info using node@v4.6.2
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'run', 'dev' ]
+2 info using npm@3.10.3
+3 info using node@v6.5.0
 4 verbose run-script [ 'predev', 'dev', 'postdev' ]
 5 info lifecycle ProjectThree@~predev: ProjectThree@
 6 silly lifecycle ProjectThree@~predev: no script for predev, continuing
 7 info lifecycle ProjectThree@~dev: ProjectThree@
 8 verbose lifecycle ProjectThree@~dev: unsafe-perm in lifecycle true
-9 verbose lifecycle ProjectThree@~dev: PATH: C:\Users\admin\AppData\Local\.meteor\packages\meteor-tool\1.4.2_3\mt-os.windows.x86_32\dev_bundle\lib\node_modules\npm\bin\node-gyp-bin;C:\Users\admin\Desktop\ProjectThree\node_modules\.bin;C:\Users\admin\AppData\Local\.meteor\packages\meteor-tool\1.4.2_3\mt-os.windows.x86_32\dev_bundle\bin;C:\Users\admin\AppData\Local\.meteor\packages\meteor-tool\1.4.2_3\mt-os.windows.x86_32\dev_bundle\lib\node_modules\.bin;C:\Users\admin\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\admin\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Program Files\Intel\WiFi\bin;C:\Program Files\Common Files\Intel\WirelessCommon;C:\Program Files (x86)\Intel\Services\IPT;C:\Program Files\Git\cmd;C:\Program Files (x86)\Heroku\bin;C:\Program Files (x86)\git\cmd;C:\Program Files (x86)\Git\cmd;C:\Program Files\nodejs;C:\Program Files\MongoDB\Server\3.4\bin;C:\Ruby23-x64\bin;C:\Program Files\Intel\WiFi\bin;C:\Program Files\Common Files\Intel\WirelessCommon;C:\Program files\sublime Text 3;C:\Users\admin\AppData\Roaming\npm;C:\Users\admin\AppData\Local\.meteor;C:\Users\admin\AppData\Local\atom\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
-10 verbose lifecycle ProjectThree@~dev: CWD: C:\Users\admin\Desktop\ProjectThree
-11 silly lifecycle ProjectThree@~dev: Args: [ '/d /s /c', 'meteor run --settings settings.json' ]
+9 verbose lifecycle ProjectThree@~dev: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/StefanieDing/Desktop/Bootcamp/04-Quarter/ProjectThree/node_modules/.bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+10 verbose lifecycle ProjectThree@~dev: CWD: /Users/StefanieDing/Desktop/Bootcamp/04-Quarter/ProjectThree
+11 silly lifecycle ProjectThree@~dev: Args: [ '-c', 'meteor run --settings settings.json' ]
 12 silly lifecycle ProjectThree@~dev: Returned: code: 1  signal: null
 13 info lifecycle ProjectThree@~dev: Failed to exec dev script
 14 verbose stack Error: ProjectThree@ dev: `meteor run --settings settings.json`
 14 verbose stack Exit status 1
-14 verbose stack     at EventEmitter.<anonymous> (C:\Users\admin\AppData\Local\.meteor\packages\meteor-tool\1.4.2_3\mt-os.windows.x86_32\dev_bundle\lib\node_modules\npm\lib\utils\lifecycle.js:255:16)
-14 verbose stack     at emitTwo (events.js:87:13)
-14 verbose stack     at EventEmitter.emit (events.js:172:7)
-14 verbose stack     at ChildProcess.<anonymous> (C:\Users\admin\AppData\Local\.meteor\packages\meteor-tool\1.4.2_3\mt-os.windows.x86_32\dev_bundle\lib\node_modules\npm\lib\utils\spawn.js:40:14)
-14 verbose stack     at emitTwo (events.js:87:13)
-14 verbose stack     at ChildProcess.emit (events.js:172:7)
-14 verbose stack     at maybeClose (internal/child_process.js:854:16)
-14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:222:5)
+14 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:242:16)
+14 verbose stack     at emitTwo (events.js:106:13)
+14 verbose stack     at EventEmitter.emit (events.js:191:7)
+14 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:40:14)
+14 verbose stack     at emitTwo (events.js:106:13)
+14 verbose stack     at ChildProcess.emit (events.js:191:7)
+14 verbose stack     at maybeClose (internal/child_process.js:877:16)
+14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
 15 verbose pkgid ProjectThree@
-16 verbose cwd C:\Users\admin\Desktop\ProjectThree
-17 error Windows_NT 6.1.7601
-18 error argv "C:\\Users\\admin\\AppData\\Local\\.meteor\\packages\\meteor-tool\\1.4.2_3\\mt-os.windows.x86_32\\dev_bundle\\bin\\node.exe" "C:\\Users\\admin\\AppData\\Local\\.meteor\\packages\\meteor-tool\\1.4.2_3\\mt-os.windows.x86_32\\dev_bundle\\lib\\node_modules\\npm\\bin\\npm-cli.js" "run" "dev"
-19 error node v4.6.2
-20 error npm  v3.10.9
+16 verbose cwd /Users/StefanieDing/Desktop/Bootcamp/04-Quarter/ProjectThree
+17 error Darwin 15.6.0
+18 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "run" "dev"
+19 error node v6.5.0
+20 error npm  v3.10.3
 21 error code ELIFECYCLE
 22 error ProjectThree@ dev: `meteor run --settings settings.json`
 22 error Exit status 1

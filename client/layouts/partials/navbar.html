@@ -6,7 +6,7 @@
           <div class="nav-wrapper">
             <a href="#" data-activates="slide-out" class="btn button-collapse"><i class="material-icons">menu</i></a>
             <a href="/" class="brand-logo"><img src="img/logo-white.png" alt="Open Close" width="150"></a>
-              <ul class="right hide-on-med-and-down">
+              <ul class="right hide-on-med-and-down menuButtons">
                 {{#if isAdminUser}}
                   <li><a href="/usermgmt">User Management</a></li>
                 {{/if}}
@@ -26,7 +26,7 @@
                       <a class="collapsible-header  waves-effect waves-red">Profile </a>
                       <div class="collapsible-body">
                         <ul>
-                          <li style="background-color: green"><a href="profile.html">Bob's Profile</a>
+                          <li style="background-color: #cd3331"><a href="profile.html"></a>
                           </li> 
                         </ul>
                       </div>
@@ -34,15 +34,9 @@
                     <li class= "bold">
                       <a class="collapsible-header  waves-effect waves-red">Messenger</a>
                       <div class="collapsible-body">
-                      <ul>
+                      <ul class= "users">
                           {{> ListUsers}}
                       </ul>
-
-                        <ul>
-                          <li style="background-color: black"><a href="#">Larry</a></li>
-                          <li style="background-color: green"><a href="#">Bob</a></li>
-                          <li style="background-color: pink"><a href="#">Cindy</a></li>
-                        </ul>
                       </div>
                     </li>
                   </ul>
