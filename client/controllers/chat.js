@@ -70,7 +70,7 @@ Meteor.subscribe("messages", {
     if (recipientID) {
       Session.set("chatWindow", true);
     } else {
-      Session.set("chatWindow", false)
+      Session.set("chatWindow", false);
     }
   }
 });
@@ -106,6 +106,11 @@ Meteor.subscribe("messages", {
     "click .more-messages": function () {
       scrollToBottom(500);
       thereAreUnreadMessages.set(false);
+    },
+
+    "click .closeBtn": function(){
+      Session.set("chatWindow", false);
+      recipientID = "";
     }
 
   });

@@ -96,10 +96,19 @@
   50% { padding-left: 30px; }
   100% { padding-left: 6px; }
 }
- 
- 
+
+
 .locationBox {
   height: 250px;
   overflow-y: scroll;
 }
 
+
+.browser-default {
+  width: 200px !important;
+}
+
+nav .button-collapse {
+  height: 65px !important;
+  width: 65px !important;
+}
