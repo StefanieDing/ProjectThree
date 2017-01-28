@@ -5,6 +5,7 @@ thereAreUnreadMessages = new ReactiveVar(false);
 var recipientID;
 var recipientsA;
 var recipientsB;
+var recipients2;
 
 scrollToBottom = function (duration) {
   var messageWindow = $(".message-window");
@@ -27,17 +28,19 @@ Meteor.subscribe("messages", {
   Template.chat.helpers({
     recentMessages: function () {
       // senderID = Meteor.userId();
-      recipients = {recipientsA : [recipientID, Meteor.userId()], 
-      recipientsB : [Meteor.userId(), recipientID]};
+      // recipients = [recipientID, Meteor.userId()];
+      // recipients2 = [recipients[1], recipients[0]];
 
-      return Messages.find({recipients: recipients}, {sort: {createdAt: 1}});
-      Meteor.call("renderMessages", recipients, function(err, res){
-        if (err) {
-          console.log(err)
-        }else {
-          return res
-          console.log(res);}
-      });
+      // db.inventory.find( { price: { $ne: 1.99, $exists: true } } )
+      // return Messages.find({$or:[{recipients: recipients}, {recipients:recipients2}], {sort: {createdAt: 1}}});
+      // Meteor.call("renderMessages", recipients, function(err, res){
+      //   if (err) {
+      //     console.log(err)
+      //   }else {
+      //     return res
+      //     console.log(res);}
+      // });
+       return Messages.find({}, {sort: {createdAt: 1}});
     },
     /* unread message helper */
     thereAreUnreadMessages: function () {
