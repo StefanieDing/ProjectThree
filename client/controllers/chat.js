@@ -2,6 +2,10 @@ var autoScrollingIsActive = false;
 // reactive var
 thereAreUnreadMessages = new ReactiveVar(false);
 
+var recipientID;
+var recipientsA;
+var recipientsB;
+
 scrollToBottom = function (duration) {
   var messageWindow = $(".message-window");
   var scrollHeight = messageWindow.prop("scrollHeight");
@@ -16,16 +20,33 @@ Meteor.subscribe("messages", {
   }
 });
 
-  /* helper code */
+// subscribing to findRecipients publication
+// Meteor.subscribe('findRecipients');
+
+  // helpers
   Template.chat.helpers({
     recentMessages: function () {
-      return Messages.find({}, {sort: {createdAt: 1}});
+      // senderID = Meteor.userId();
+      recipients = {recipientsA : [recipientID, Meteor.userId()], 
+      recipientsB : [Meteor.userId(), recipientID]};
+
+      return Messages.find({recipients: recipients}, {sort: {createdAt: 1}});
+      Meteor.call("renderMessages", recipients, function(err, res){
+        if (err) {
+          console.log(err)
+        }else {
+          return res
+          console.log(res);}
+      });
     },
     /* unread message helper */
     thereAreUnreadMessages: function () {
       return thereAreUnreadMessages.get();
     }
 
+    // if (Recipient1 == Meteor.user().emails[0].address && Recipient2 == recipientEmail) {
+
+    // }
   })
 
   /*chat window scrolling*/
@@ -39,13 +60,30 @@ Meteor.subscribe("messages", {
     }
   });
 
+  // Event to grab recipient Email
+  Template.ListUsers.events({
+  'click .username': function(event){
+    recipientID = event.target.id;
+    console.log(recipientID);
+
+
+    if (recipientID) {
+      Session.set("chatWindow", true);
+    } else {
+      Session.set("chatWindow", false)
+    }
+  }
+});
 
   /*events*/
   Template.chat.events({
     "submit .new-message": function(event) {
       var messageText = event.target.text.value;
 
-      Meteor.call("sendMessage", messageText);
+      Meteor.call("sendMessage", messageText, recipientID);
+
+      // console.log(recipientEmail);
+
       scrollToBottom(250);
 
       event.target.text.value = "";

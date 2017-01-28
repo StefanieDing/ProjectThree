@@ -1,3 +1,5 @@
+var recipientID;
+
 Template.navbar.helpers({
   // check if user is an admin
   'isAdminUser': function() {
@@ -25,16 +27,17 @@ Template.ListUsers.helpers({
   email(){ return this.emails[0].address; }
 });
 
-Template.ListUsers.events({
-  'click li': function(event){
-    var userEmail = $(event.target).closest('a').html();
-    console.log(userEmail);
 
-    if (userEmail) {
-      Session.set("chatWindow", true);
-    } else {
-      Session.set("chatWindow", false)
-    }
-  }
-});
+// code to list online users
+// Meteor.subscribe('userStatus');
+
+// Template.example.helpers({
+//   usersOnline:function(){
+//     return Meteor.users.find({ "status.online": true })
+//   },
+//   usersOnlineCount:function(){
+//    //event a count of users online too.
+//    return Meteor.users.find({ "status.online": true }).count();
+//   }
+// })
 

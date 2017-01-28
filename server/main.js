@@ -11,17 +11,32 @@ Meteor.startup(() => {
     Roles.addUsersToRoles(Meteor.settings.adminId, ['admin']);
   }
 
+
   Meteor.publish("locations", function () {
     return Locations.find({});
   });
+
 
   Meteor.publish("messages", function () {
     return Messages.find();
   });
 
 
+  // finds all user emails
   Meteor.publish('allEmails', function (){ 
-  return Meteor.users.find({},{fields: { emails: 1 }});
-});
+   return Meteor.users.find({},{fields: { emails: 1 }});
+
+  });
+
+  // finds recipients for chat
+  // Meteor.publish('findRecipients', function (){ 
+  //  return Messages.find({},{fields: {recipients: 1}});
+
+  // });
+
+  // // finds all online users
+  // Meteor.publish("userStatus", function() {
+  //   return Meteor.users.find({ "status.online": true });
+  // });
 });
 

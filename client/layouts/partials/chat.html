@@ -1,16 +1,17 @@
 <template name="chat">
   <div class="chatContainer">
     <header class="chatHeader">
-      <h5>Type a message to begin!</h5>
+      <h5>Type a message to begin!
+      <a class="tiny btn-floating btn-small waves-effect waves-light red"><i class="tiny material-icons" style="font-size: 18px;">shuffle</i></a></h5>
     </header>
-    
+    <!-- {{#each Recipient}} -->
     <!-- chat messages here -->
-    <ul class="message-window">
+    <ul class="message-window collection">
       {{#each recentMessages}}
         {{> message}}
       {{/each}}
     </ul>
-
+    
     <!-- more-messages button -->
     {{#momentum plugin="fade"}}
       {{#if thereAreUnreadMessages}}
@@ -27,8 +28,9 @@
 </template>
 
 <template name="message">
-  <li class="message">
+  <li class="message collection-item">
     <div class="username">{{username}}</div>
+    <div class="date"><small>{{createdAt}}</small></div>
     <div class="message-text">{{messageText}}</div>
   </li>
 </template>
